@@ -1,3 +1,3 @@
-export function FeaturedStories() {
+export default function FeaturedStories() {
   return <div>Navbar</div>
 }

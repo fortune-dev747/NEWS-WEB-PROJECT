@@ -1,3 +1,3 @@
-export function Sport() {
+export default function Sport() {
   return <div>Navbar</div>
 }

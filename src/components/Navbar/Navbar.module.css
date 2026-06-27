@@ -1,0 +1,168 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid #E0E0E0;
+  margin-bottom: 64px;
+}
+
+/* Bar 1 */
+.topBar {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background-color: #D32C89;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.topLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topLinks a {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--bg);
+}
+
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--bg);
+  margin-right: 10px;
+}
+
+.socials a {
+  font-size: 14px;
+}
+
+.socials a:nth-child(1) {
+  color: #030303;
+  margin-right: 10px;
+}
+
+.socials a:nth-child(2) {
+  color: #1877F2;
+    margin-right: 10px;
+}
+
+.socials a:nth-child(3) {
+  color: #000000;
+    margin-right: 10px;
+}
+
+.socials a:nth-child(4) {
+  color: #0A66C2;
+    margin-right: 10px;
+}
+
+/* Ad Banner */
+.adBanner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: var(--text-primary);
+}
+
+.adBanner img {
+  max-height: 179px;
+  object-fit: cover;
+}
+
+/* Bar 2 */
+.mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 70px;
+    color: var(--bg);
+  background-color: var(--text-primary);
+}
+
+.mainNavLeft {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo img {
+  object-fit: contain;
+}
+
+.mainLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 4px;
+}
+
+.mainLinks a {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--bg);
+}
+
+.mainLinks a:hover {
+  color: var(--accent);
+}
+
+.mainNavRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--text-primary);
+}
+
+.mainNavRight a {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--bg);
+}
+
+.mainNavRight a:hover {
+  color: var(--accent);
+}
+
+.searchBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+}
+
+.searchBtn:hover {
+  color: var(--accent);
+}
+
+.slash {
+  color: var(--text-secondary);
+}
+
+.login, .signup {
+  font-weight: 600 !important;
+}
+
+.mainSection {
+  background-color: var(--text-primary);
+  height: 221px;
+}

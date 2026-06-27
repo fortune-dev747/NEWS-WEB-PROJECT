@@ -1,3 +1,3 @@
-export function NewsInPictures() {
+export default function NewsInPictures() {
   return <div>Navbar</div>
 }
