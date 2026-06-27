@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar/Navbar'
-import TopStories from '../components/TopStories/TopStories'
+import TopStories from '../components/Top-stories/TopStories'
 import LatestNews from '../components/LatestNews/LatestNews'
 import MoreStories from '../components/MoreStories/MoreStories'
 import Politics from '../components/Politics/Politics'
