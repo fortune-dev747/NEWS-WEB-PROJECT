@@ -1,3 +1,3 @@
 export default function NewsInVideos() {
-  return <div>Navbar</div>
+  return <div>NewsInVideos</div>
 }

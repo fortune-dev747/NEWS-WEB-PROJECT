@@ -1,3 +1,3 @@
 export default function MissedStories() {
-  return <div>Navbar</div>
+  return <div>MissedStories</div>
 }

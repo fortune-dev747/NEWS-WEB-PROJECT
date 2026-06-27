@@ -1,3 +1,3 @@
 export default function TopStories() {
-  return <div>Navbar</div>
+  return <div>TopStories</div>
 }

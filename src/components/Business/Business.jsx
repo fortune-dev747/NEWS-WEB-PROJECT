@@ -1,3 +1,3 @@
 export default function Business() {
-  return <div>Navbar</div>
+  return <div>Business</div>
 }
