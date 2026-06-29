@@ -10,22 +10,22 @@ export default function Business() {
     },
     {
       id: 2,
-      image: '/images/politics/fuel-petrol.jpg',
+      image: '/images/business/fuel-petrol.jpg',
       headline: 'Foden Sparkles As Man City Crush Spineless Man United',
     },
     {
       id: 3,
-      image: '/images/politics/fuel-petrol.jpg',
+      image: '/images/business/fuel-petrol.jpg',
       headline: 'Foden Sparkles As Man City Crush Spineless Man United',
     },
     {
       id: 4,
-      image: '/images/politics/fuel-petrol.jpg',
+      image: '/images/business/fuel-petrol.jpg',
       headline: 'Foden Sparkles As Man City Crush Spineless Man United',
     },
     {
       id: 5,
-      image: '/images/politics/fuel-petrol.jpg',
+      image: '/images/business/fuel-petrol.jpg',
       headline: 'Foden Sparkles As Man City Crush Spineless Man United',
     },
   ]
