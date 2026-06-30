@@ -47,9 +47,9 @@ export default function Navbar() {
               <img src="/images/navbar/AGC-navbar.png" alt="AGC News" width={93} height={59} />
             </a>
             <nav className={styles.mainLinks}>
-              <a href="#" className={`${styles.mainLink} ${styles.active}`}>Home</a>
+              <NavLink to="/" end className={({ isActive }) => `${styles.mainLink} ${isActive ? styles.active : ''}`}>Home</NavLink>
               <a href="#">Africa</a>
-              <NavLink to="/politics" className={styles.mainLinks}>Politics</NavLink>
+              <NavLink to="/politics" className={({ isActive }) => `${styles.mainLink} ${isActive ? styles.active : ''}`}>Politics</NavLink>
               <a href="#">Business</a>
               <a href="#">Sport</a>
               <a href="#">Health</a>
@@ -58,7 +58,7 @@ export default function Navbar() {
             </nav>
           </div>
           <nav className={styles.mainNavRight}>
-            <h5 href="#">|</h5>
+            <h5>|</h5>
             <a href="#">Photos</a>
             <a href="#">Videos</a>
             <a href="#">Audio</a>

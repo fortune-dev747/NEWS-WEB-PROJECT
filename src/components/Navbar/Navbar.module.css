@@ -114,9 +114,6 @@
   color: var(--bg);
 }
 
-.mainLinks a:hover {
-  color: var(--accent);
-}
 
 .mainNavRight {
   display: flex;
