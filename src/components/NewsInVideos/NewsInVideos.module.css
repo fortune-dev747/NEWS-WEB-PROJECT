@@ -1,0 +1,121 @@
+.newsInVideos {
+  margin: 0 46px 48px;
+  padding: 24px 0;
+}
+
+/* Header Row */
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.heading {
+  font-family: var(--font-body);
+  font-size: 28px;
+  font-weight: 700;
+  color: #282828;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-left: 60px;
+}
+
+.viewMore {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color:#282828;
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+.viewMore:hover {
+  opacity: 0.8;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 428px);
+  gap: 24px;
+  margin-left: 40px;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 428px;
+  height: 290px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pill {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 22px;
+  padding: 4px 14px;
+}
+
+.playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(16, 15, 15, 0.512);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.playIcon {
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+.headline {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: #282828;
+  line-height: 30px;
+  letter-spacing: 0%;
+  width: 370px;
+}
+
+.divider {
+  width: 428px;
+  height: 1px;
+  background-color: #C8C8C8;
+}
