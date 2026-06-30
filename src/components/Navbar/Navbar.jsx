@@ -2,7 +2,7 @@ import styles from './Navbar.module.css'
 import { NavLink } from 'react-router-dom'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 
-export default function Navbar() {
+export default function Navbar({ adImages = ['/images/navbar/ad-navbar.png'] }) {
   const today = new Date().toLocaleDateString('en-US', {
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
   })
@@ -33,11 +33,12 @@ export default function Navbar() {
       </div>
 
       {/* Ad Banner + Bar 2 */}
-      <div className={styles.mainSection}>
 
-        {/* Ad Banner */}
+      <div className={styles.mainSection}>
         <div className={styles.adBanner}>
-          <img src="/images/navbar/ad-navbar.png" alt="Advertisement" />
+          {adImages.map((img, index) => (
+            <img key={index} src={img} alt="Advertisement" />
+          ))}
         </div>
 
         {/* Bar 2 */}

@@ -66,14 +66,29 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 16px;
   padding: 10px 0;
-  background-color: var(--text-primary);
 }
 
 .adBanner img {
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* Single ad (homepage) */
+.adBanner img:only-child {
   max-height: 179px;
   object-fit: cover;
 }
+
+/* Multiple ads (politics page, etc) */
+.adBanner:has(img:nth-child(2)) img {
+  width: 589px;
+  height: 151px;
+}
+
+
 
 /* Bar 2 */
 .mainNav {
