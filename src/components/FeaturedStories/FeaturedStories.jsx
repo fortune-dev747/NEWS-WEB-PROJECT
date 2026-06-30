@@ -46,7 +46,6 @@ export default function FeaturedStories() {
         <ul className={styles.storyList}>
           {bottomStories.map((story, index) => (
             <li key={index} className={styles.storyItem}>
-              <span className={styles.redSquare}></span>
               <p className={styles.storyText}>{story}</p>
             </li>
           ))}
@@ -81,7 +80,6 @@ export default function FeaturedStories() {
         <ul className={styles.storyList}>
           {bottomStories.map((story, index) => (
             <li key={index} className={styles.storyItem}>
-              <span className={styles.redSquare}></span>
               <p className={styles.storyText}>{story}</p>
             </li>
           ))}
