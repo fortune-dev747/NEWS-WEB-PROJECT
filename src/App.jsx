@@ -1,13 +1,12 @@
+import { Routes, Route } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
-import './index.css'
-
+import PoliticsPage from './pages/PoliticsPage'
 
 export default function App() {
-   return (
-    <div>
-      <HomePage />
-    </div>
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/politics" element={<PoliticsPage />} />
+    </Routes>
   )
 }
-
-

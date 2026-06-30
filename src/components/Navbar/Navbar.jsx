@@ -1,4 +1,5 @@
 import styles from './Navbar.module.css'
+import { NavLink } from 'react-router-dom'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 
 export default function Navbar() {
@@ -48,7 +49,7 @@ export default function Navbar() {
             <nav className={styles.mainLinks}>
               <a href="#" className={`${styles.mainLink} ${styles.active}`}>Home</a>
               <a href="#">Africa</a>
-              <a href="#">Politics</a>
+              <NavLink to="/politics" className={styles.mainLinks}>Politics</NavLink>
               <a href="#">Business</a>
               <a href="#">Sport</a>
               <a href="#">Health</a>

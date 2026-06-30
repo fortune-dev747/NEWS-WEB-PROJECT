@@ -1,14 +1,15 @@
+import { Link } from 'react-router-dom'
 import styles from './TopStories.module.css'
 
-export default function TopStories() {
+export default function TopStories({ heading = 'TOP STORIES' }) {
   return (
     <section className={styles.topStories}>
-      <h2 className={styles.heading}>TOP STORIES</h2>
+      <h2 className={styles.heading}>{heading}</h2>
 
       <div className={styles.storiesGrid}>
         {/* Large Left Image */}
         <div className={styles.mainStory}>
-          <img src="/images/top-stories/Putin.png" alt="Latest Today" />
+         <Link to="/politics"><img src="/images/top-stories/Putin.png" alt="Latest Today" /></Link> 
           <div className={styles.mainOverlay}>
             <span className={styles.tag}>LATEST TODAY</span>
             <p className={styles.mainDesc}>Putin promises grains, debt write-off as Russia seeks Africa allies.</p>
