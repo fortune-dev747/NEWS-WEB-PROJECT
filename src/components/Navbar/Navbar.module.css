@@ -41,28 +41,24 @@
   margin-right: 10px;
 }
 
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .socials a {
-  font-size: 14px;
+  width: 20.1px;
+  height: 20.1px;
+  color: #2D2A2A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
 }
 
-.socials a:nth-child(1) {
-  color: #030303;
-  margin-right: 10px;
-}
-
-.socials a:nth-child(2) {
-  color: #1877F2;
-    margin-right: 10px;
-}
-
-.socials a:nth-child(3) {
-  color: #000000;
-    margin-right: 10px;
-}
-
-.socials a:nth-child(4) {
-  color: #0A66C2;
-    margin-right: 10px;
+.socials a:hover {
+ cursor: pointer;
 }
 
 /* Ad Banner */

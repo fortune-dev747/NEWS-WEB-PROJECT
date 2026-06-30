@@ -1,5 +1,4 @@
 import styles from './Navbar.module.css'
-import { FaInstagram, FaFacebookF, FaXTwitter, FaLinkedinIn } from 'react-icons/fa6'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 
 export default function Navbar() {
@@ -23,10 +22,11 @@ export default function Navbar() {
         <div className={styles.topRight}>
           <span className={styles.date}>{today} |</span>
           <div className={styles.socials}>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaXTwitter /></a>
-            <a href="#"><FaLinkedinIn /></a>
+            <a href="#"><img src="/images/navbar/IG.png" alt="IG" /></a>
+            <a href="#"><img src="/images/navbar/FB.png" alt="FB" /></a>
+            <a href="#"><img src="/images/navbar/X.png" alt="X" /></a>
+            <a href="#"><img src="/images/navbar/tracking.png" alt="tracking" /></a>
+            <a href="#"><img src="/images/navbar/LinkedIn.png" alt="LinkedIn" /></a>
           </div>
         </div>
       </div>
