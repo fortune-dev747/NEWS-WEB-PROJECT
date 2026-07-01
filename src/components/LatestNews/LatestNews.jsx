@@ -1,7 +1,7 @@
 import styles from './LatestNews.module.css'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 
-export default function LatestNews() {
+export default function LatestNews({ heading='Latest News' }) {
   const cards = [
     {
       id: 1,
@@ -34,7 +34,7 @@ export default function LatestNews() {
 
       {/* Header Row */}
       <div className={styles.headerRow}>
-        <h2 className={styles.heading}>LATEST NEWS</h2>
+        <h2 className={styles.heading}>{heading}</h2>
         <div className={styles.controls}>
           <button className={styles.arrow}><FaChevronLeft /></button>
           <span className={styles.dot + ' ' + styles.activeDot}></span>
