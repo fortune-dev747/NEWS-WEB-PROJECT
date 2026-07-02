@@ -1,8 +1,11 @@
 import styles from './Navbar.module.css'
 import { NavLink } from 'react-router-dom'
-import { FaMagnifyingGlass } from 'react-icons/fa6'
+import { FaMagnifyingGlass, FaBars, FaXmark, FaCaretDown, FaCircleUser } from 'react-icons/fa6'
+import { useState } from 'react'
 
 export default function Navbar({ adImages = ['/images/navbar/ad-navbar.png'] }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   const today = new Date().toLocaleDateString('en-US', {
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
   })
@@ -10,7 +13,7 @@ export default function Navbar({ adImages = ['/images/navbar/ad-navbar.png'] }) 
   return (
     <header className={styles.header}>
 
-      {/* Bar 1 */}
+      {/* Desktop Bar 1 */}
       <div className={styles.topBar}>
         <nav className={styles.topLinks}>
           <a href="#">About Us</a>
@@ -33,7 +36,6 @@ export default function Navbar({ adImages = ['/images/navbar/ad-navbar.png'] }) 
       </div>
 
       {/* Ad Banner + Bar 2 */}
-
       <div className={styles.mainSection}>
         <div className={styles.adBanner}>
           {adImages.map((img, index) => (
@@ -41,7 +43,7 @@ export default function Navbar({ adImages = ['/images/navbar/ad-navbar.png'] }) 
           ))}
         </div>
 
-        {/* Bar 2 */}
+        {/* Desktop Bar 2 */}
         <div className={styles.mainNav}>
           <div className={styles.mainNavLeft}>
             <a href="#" className={styles.logo}>
@@ -70,6 +72,42 @@ export default function Navbar({ adImages = ['/images/navbar/ad-navbar.png'] }) 
           </nav>
         </div>
 
+      </div>
+
+      {/* Mobile Bar */}
+      <div className={styles.mobileBar}>
+        <div className={styles.mobileLeft}>
+          <button className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <FaXmark /> : <FaBars />}
+          </button>
+          <button className={styles.mobileSearch}><FaMagnifyingGlass /></button>
+        </div>
+        <a href="#" className={styles.mobileLogo}>
+          <img src="/images/navbar/AGC-navbar.png" alt="AGC News" width={70} height={44} />
+        </a>
+        <div className={styles.mobileRight}>
+          <FaCircleUser className={styles.profileIcon} />
+          <FaCaretDown className={styles.dropdownIcon} />
+        </div>
+      </div>
+
+      {/* Mobile Ad Banner */}
+      <div className={styles.mobileAdBanner}>
+        <img src={adImages[0]} alt="Advertisement" />
+      </div>
+
+      {/* Mobile Drawer */}
+      <div className={`${styles.drawer} ${menuOpen ? styles.drawerOpen : ''}`}>
+        <nav className={styles.drawerLinks}>
+          <NavLink to="/" end className={({ isActive }) => isActive ? styles.drawerLinkActive : styles.drawerLink} onClick={() => setMenuOpen(false)}>Home</NavLink>
+          <NavLink to="/africa" className={({ isActive }) => isActive ? styles.drawerLinkActive : styles.drawerLink} onClick={() => setMenuOpen(false)}>Africa</NavLink>
+          <NavLink to="/politics" className={({ isActive }) => isActive ? styles.drawerLinkActive : styles.drawerLink} onClick={() => setMenuOpen(false)}>Politics</NavLink>
+          <NavLink to="/business" className={({ isActive }) => isActive ? styles.drawerLinkActive : styles.drawerLink} onClick={() => setMenuOpen(false)}>Business</NavLink>
+          <NavLink to="/sport" className={({ isActive }) => isActive ? styles.drawerLinkActive : styles.drawerLink} onClick={() => setMenuOpen(false)}>Sport</NavLink>
+          <NavLink to="/health" className={({ isActive }) => isActive ? styles.drawerLinkActive : styles.drawerLink} onClick={() => setMenuOpen(false)}>Health</NavLink>
+          <NavLink to="/tech" className={({ isActive }) => isActive ? styles.drawerLinkActive : styles.drawerLink} onClick={() => setMenuOpen(false)}>Tech</NavLink>
+          <NavLink to="/opinion" className={({ isActive }) => isActive ? styles.drawerLinkActive : styles.drawerLink} onClick={() => setMenuOpen(false)}>Opinion</NavLink>
+        </nav>
       </div>
 
     </header>
