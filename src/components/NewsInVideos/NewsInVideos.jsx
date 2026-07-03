@@ -55,10 +55,8 @@ export default function NewsInVideos() {
 
       {/* Grid */}
       <div className={styles.grid}>
-        {videos.map(video => (
+        {videos.map((video) => (
           <div key={video.id} className={styles.card}>
-
-            {/* Image */}
             <div className={styles.imageWrapper}>
               <img src={video.image} alt={video.headline} />
               <span className={styles.pill}>{video.category}</span>
@@ -66,17 +64,42 @@ export default function NewsInVideos() {
                 <FaPlay className={styles.playIcon} />
               </div>
             </div>
-
-            {/* Headline */}
-            <p className={styles.headline}>{video.headline}</p>
-
-            {/* Divider */}
+            <div className={styles.cardText}>
+              <span className={styles.categoryLabel}>{video.category}</span>
+              <p className={styles.headline}>{video.headline}</p>
+            </div>
             <div className={styles.divider}></div>
+          </div>
+        ))}
+      </div >
 
+      {/* Mobile Grid */}
+      <div className={styles.mobileGrid}>
+        <div className={styles.card}>
+          <div className={styles.imageWrapper}>
+            <img src={videos[0].image} alt={videos[0].headline} />
+            <span className={styles.pill}>{videos[0].category}</span>
+            <div className={styles.playBtn}><FaPlay className={styles.playIcon} /></div>
+          </div>
+          <div className={styles.cardText}>
+            <p className={styles.headline}>{videos[0].headline}</p>
+          </div>
+          <div className={styles.divider}></div>
+        </div>
+        {[1, 2, 3].map(i => (
+          <div key={i} className={styles.card}>
+            <div className={styles.imageWrapper}>
+              <img src={videos[1].image} alt={videos[i].headline} />
+              <div className={styles.playBtn}><FaPlay className={styles.playIcon} /></div>
+            </div>
+            <div className={styles.cardText}>
+              <span className={styles.categoryLabel}>{videos[i].category}</span>
+              <p className={styles.headline}>{videos[i].headline}</p>
+            </div>
           </div>
         ))}
       </div>
 
-    </section>
+    </section >
   )
 }
