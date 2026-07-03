@@ -210,3 +210,96 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* ── LARGE SCREENS (1024px) ── */
+@media (max-width: 1024px) {
+  .featuredStories {
+    margin: 48px 24px;
+    gap: 16px;
+  }
+
+  .column, .middleColumn {
+    width: 320px;
+  }
+
+  .imageCard {
+    width: 100%;
+    height: 220px;
+  }
+
+  .headline {
+    font-size: 18px;
+    line-height: 26px;
+    width: 100%;
+  }
+
+  .storyText {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .rightColumn {
+    width: 260px;
+  }
+
+  .adTop {
+    width: 100%;
+    height: 320px;
+  }
+
+  .adBottom {
+    width: 100%;
+    height: 240px;
+  }
+}
+
+/* ── TABLET & MOBILE (768px) ── */
+@media (max-width: 768px) {
+  .featuredStories {
+    flex-direction: column;
+    margin: 24px 16px;
+    padding: 16px 0;
+    margin-top: 32px;
+    gap: 0;
+  }
+
+  .column {
+    display: none;
+  }
+
+  .middleColumn {
+    display: none;
+  }
+
+  .rightColumn {
+    position: static;
+    width: 344px;
+    margin: 0 auto;
+    height: 824px;
+  }
+
+  .adTop {
+    width: 344px;
+    height: 444px;
+  }
+
+  .adBottom {
+    width: 344px;
+    height: 330px;
+  }
+}
+
+/* ── MOBILE (375px) ── */
+@media (max-width: 375px) {
+  .featuredStories {
+    margin: 16px 12px;
+  }
+
+  .adTop {
+    height: 160px;
+  }
+
+  .adBottom {
+    height: 120px;
+  }
+}
