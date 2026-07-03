@@ -31,7 +31,7 @@ export default function Sport() {
   ]
 
   return (
-    <section className={styles.business}>
+    <section className={styles.sport}>
 
       {/* Left Side */}
       <div className={styles.leftSide}>
