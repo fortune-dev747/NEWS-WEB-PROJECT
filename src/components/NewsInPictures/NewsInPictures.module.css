@@ -286,3 +286,47 @@
     line-height: 18px;
   }
 }
+
+/* ── SMALL MOBILE (320px) ── */
+@media (max-width: 320px) {
+  .newsInPictures {
+    margin: 0 8px 24px;
+    padding: 12px 0;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+
+  .viewMore {
+    font-size: 11px;
+  }
+
+  .mobileMainCard {
+    height: 160px;
+    margin-bottom: 24px;
+  }
+
+  .mobileMainCard img {
+    height: 160px;
+  }
+
+  .mobileMainCard .mainHeadline {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .mobileCard .mobileThumb {
+    width: 85px;
+    height: 65px;
+  }
+
+  .mobileCard .mobileCategory {
+    font-size: 10px;
+  }
+
+  .mobileCard .mobileHeadline {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
