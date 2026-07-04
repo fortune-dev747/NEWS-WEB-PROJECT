@@ -61,7 +61,26 @@ export default function NewsInPictures() {
         </div>
 
       </div>
-
+      {/* Mobile Grid */}
+      <div className={styles.mobileGrid}>
+        <div className={styles.mobileMainCard}>
+          <img src="/images/news-in-pictures/news-pictures1.png" alt="News in Pictures" />
+          <div className={styles.mainOverlay}>
+            <p className={styles.mainHeadline}>Putin promises grains, debt write-off as Russia seeks Africa allies</p>
+          </div>
+        </div>
+        {[0, 1, 2].map(i => (
+          <div key={i} className={styles.mobileCard}>
+            <div className={styles.mobileThumb}>
+              <img src={gridImages[0].image} alt={gridImages[i].headline} />
+            </div>
+            <div className={styles.mobileText}>
+              <span className={styles.mobileCategory}>News</span>
+              <p className={styles.mobileHeadline}>{gridImages[i].headline}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   )
 }

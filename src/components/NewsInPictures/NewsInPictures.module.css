@@ -119,3 +119,170 @@
   letter-spacing: 0%;
   color:#FFFFFF;
 }
+.mobileGrid {
+  display: none;
+}
+
+/* ── LARGE SCREENS (1024px) ── */
+@media (max-width: 1024px) {
+  .newsInPictures {
+    margin: 0 24px 48px;
+  }
+
+  .heading {
+    font-size: 22px;
+    margin-left: 0;
+  }
+
+  .viewMore {
+    font-size: 14px;
+    margin-right: 0;
+  }
+
+  .mainCard {
+    width: 45%;
+    height: 400px;
+    margin-left: 0;
+  }
+
+  .mainHeadline {
+    font-size: 18px;
+    line-height: 26px;
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 190px);
+    flex: 1;
+  }
+
+  .gridHeadline {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* ── TABLET & MOBILE (768px) ── */
+@media (max-width: 768px) {
+  .newsInPictures {
+    margin: 0 16px 32px;
+    padding: 16px 0;
+    border-top: 1px solid #E0E0E0;
+    padding-top: 24px;
+  }
+
+  .heading {
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .viewMore {
+    font-size: 13px;
+    margin-right: 0;
+  }
+
+  /* Hide desktop content */
+  .content {
+    display: none;
+  }
+
+  /* Mobile layout */
+  .mobileGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+ .mobileMainCard {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 3px;
+  overflow: visible;
+  margin-bottom: 40px;
+}
+
+.mobileMainCard img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 3px;
+  display: block;
+}
+
+.mobileMainCard .mainOverlay {
+  position: static;
+  background: none;
+  padding: 10px 0 0;
+}
+
+.mobileMainCard .mainHeadline {
+  font-size: 16px;
+  line-height: 22px;
+  width: 100%;
+  color: #282828;
+}
+
+  .mobileCard {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .mobileCard .mobileThumb {
+    width: 120px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .mobileCard .mobileThumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .mobileCard .mobileText {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+  }
+
+  .mobileCard .mobileCategory {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .mobileCard .mobileHeadline {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    color: #282828;
+    line-height: 20px;
+  }
+}
+
+/* ── MOBILE (375px) ── */
+@media (max-width: 375px) {
+  .mobileMainCard {
+    height: 180px;
+  }
+
+  .mobileCard .mobileThumb {
+    width: 100px;
+    height: 75px;
+  }
+
+  .mobileCard .mobileHeadline {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
