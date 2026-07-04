@@ -8,6 +8,15 @@ export default function Footer() {
     ['Politics', 'Health', 'Videos', 'Privacy Policy', 'Advert Rate'],
   ]
 
+  const mobileLinkRows = [
+    ['Home', 'Sport', 'AGC Archive'],
+    ['Africa', 'Business', 'Photos'],
+    ['Politics', 'Health', 'Privacy Policy'],
+    ['Tech', 'About Us', ''],
+    ['Opinion', 'Contact Us', ''],
+    ['Videos', 'Advert Rate', ''],
+  ]
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -30,12 +39,23 @@ export default function Footer() {
           <FaMagnifyingGlass className={styles.searchIcon} />
         </div>
 
-        {/* Links Grid */}
+        {/* Desktop Links Grid */}
         <div className={styles.linksGrid}>
           {linkRows.map((row, rowIndex) => (
             <div key={rowIndex} className={styles.linkRow}>
               {row.map((link, linkIndex) => (
                 <a key={linkIndex} href="#" className={styles.link}>{link}</a>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Links Grid */}
+        <div className={styles.mobileLinksGrid}>
+          {mobileLinkRows.map((row, rowIndex) => (
+            <div key={rowIndex} className={styles.mobileLinkRow}>
+              {row.map((link, linkIndex) => (
+                link ? <a key={linkIndex} href="#" className={styles.link}>{link}</a> : <span key={linkIndex}></span>
               ))}
             </div>
           ))}
