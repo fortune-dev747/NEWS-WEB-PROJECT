@@ -9,7 +9,7 @@ export default function TopStories({ heading = 'TOP STORIES' }) {
       <div className={styles.storiesGrid}>
         {/* Large Left Image */}
         <div className={styles.mainStory}>
-         <Link to="/politics/:id"><img src="/images/top-stories/Putin.png" alt="Latest Today" /></Link> 
+         <Link to="/politics/:articleId"><img src="/images/top-stories/Putin.png" alt="Latest Today" /></Link> 
           <div className={styles.mainOverlay}>
             <span className={styles.tag}>LATEST TODAY</span>
             <p className={styles.mainDesc}>Putin promises grains, debt write-off as Russia seeks Africa allies.</p>

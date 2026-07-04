@@ -51,13 +51,13 @@ export default function Navbar({ adImages = ['/images/navbar/ad-navbar.png'] }) 
             </a>
             <nav className={styles.mainLinks}>
               <NavLink to="/" end className={({ isActive }) => `${styles.mainLink} ${isActive ? styles.active : ''}`}>Home</NavLink>
-              <a href="#">Africa</a>
+              <NavLink to="/africa" className={({ isActive }) => `${styles.mainLink} ${isActive ? styles.active : ''}`}>Africa</NavLink>
               <NavLink to="/politics" className={({ isActive }) => `${styles.mainLink} ${isActive ? styles.active : ''}`}>Politics</NavLink>
-              <a href="#">Business</a>
-              <a href="#">Sport</a>
-              <a href="#">Health</a>
-              <a href="#">Tech</a>
-              <a href="#">Opinion</a>
+              <NavLink to="/business" className={({ isActive }) => `${styles.mainLink} ${isActive ? styles.active : ''}`}>Business</NavLink>
+              <NavLink to="/sport" className={({ isActive }) => `${styles.mainLink} ${isActive ? styles.active : ''}`}>Sport</NavLink>
+              <NavLink to="/health" className={({ isActive }) => `${styles.mainLink} ${isActive ? styles.active : ''}`}>Health</NavLink>
+              <NavLink to="/tech" className={({ isActive }) => `${styles.mainLink} ${isActive ? styles.active : ''}`}>Tech</NavLink>
+              <NavLink to="/opinion" className={({ isActive }) => `${styles.mainLink} ${isActive ? styles.active : ''}`}>Opinion</NavLink>
             </nav>
           </div>
           <nav className={styles.mainNavRight}>
