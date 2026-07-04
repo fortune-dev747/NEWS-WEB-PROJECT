@@ -211,3 +211,174 @@
   height: 100%;
   object-fit: cover;
 }
+
+
+/* ── LARGE SCREENS (1024px) ── */
+@media (max-width: 1024px) {
+  .missedStories {
+    margin: 0 24px 48px;
+    margin-left: 24px;
+  }
+
+  .heading {
+    font-size: 22px;
+    margin-left: 0;
+  }
+
+  .controls {
+    margin-right: 0;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .card {
+    width: 45%;
+    margin-left: 0;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 24px;
+  }
+
+  .newsletter {
+    width: 100%;
+  }
+
+  .emailInput {
+    width: 100%;
+  }
+
+  .subscribeBtn {
+    width: 100%;
+  }
+
+  .adImage {
+    width: 100%;
+    height: 150px;
+    margin-left: 0;
+  }
+}
+
+.showMoreBtn {
+  display: none;
+}
+
+/* RESPONSIVENESS */
+/* ── TABLET & MOBILE (768px) ── */
+@media (max-width: 768px) {
+  .missedStories {
+    margin: 0 16px 32px;
+    margin-left: 16px;
+    padding: 16px 0;
+  }
+
+  .heading {
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  .controls {
+    display: none;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card {
+    width: 100%;
+    margin-left: 0;
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 16px;
+  }
+
+  .card:last-child {
+    border-bottom: none;
+  }
+
+  .headline {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  /* Show More Button */
+  .showMoreBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .showMorePill {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    border: 1px solid #999999;
+    border-radius: 22px;
+    padding: 10px 28px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .showMorePill:hover {
+    background: var(--text-primary);
+    color: #FFFFFF;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+    margin-top: 32px;
+    margin-left: 0;
+    gap: 24px;
+  }
+
+  .newsletter {
+    width: 100%;
+  }
+
+  .newsletterText {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .emailInput {
+    width: 100%;
+  }
+
+  .subscribeBtn {
+    width: 100%;
+  }
+
+  .adImage {
+    width: 100%;
+    height: 120px;
+    margin-left: 0;
+  }
+}
+
+/* ── MOBILE (375px) ── */
+@media (max-width: 375px) {
+  .missedStories {
+    margin: 0 12px 24px;
+    margin-left: 12px;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+
+  .headline {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .adImage {
+    height: 90px;
+  }
+}

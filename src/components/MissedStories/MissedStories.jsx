@@ -63,6 +63,12 @@ export default function MissedStories() {
         ))}
       </div>
 
+      {/* Show More Button */}
+      <div className={styles.showMoreBtn}>
+        <button className={styles.showMorePill}>Show More</button>
+      </div>
+
+
       {/* Bottom Section */}
       <div className={styles.bottomSection}>
 
