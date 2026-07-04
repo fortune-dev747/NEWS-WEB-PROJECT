@@ -230,3 +230,358 @@
     height: 100%;
     object-fit: cover;
 }
+
+
+/* Tablet & Small Laptops */
+@media screen and (max-width: 1200px) {
+    .storyCard {
+        max-width: 100%;
+        min-height: 250px;
+    }
+    
+    .imageWrapper {
+        width: 350px;
+        height: 250px;
+    }
+    
+    .headline {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    
+    .description {
+        font-size: 17px;
+        line-height: 26px;
+    }
+    
+    .ad466 {
+        width: 200px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .otherStories {
+        margin: 0 16px 32px;
+        padding: 16px 0;
+    }
+    
+    .row {
+        gap: 16px;
+    }
+    
+    .storyCard {
+        flex-direction: column;
+        min-height: auto;
+        gap: 16px;
+    }
+    
+    .imageWrapper {
+        width: 100%;
+        height: 220px;
+        min-width: unset;
+    }
+    
+    .storyContent {
+        padding: 0 0 16px 0;
+    }
+    
+    .headline {
+        font-size: 20px;
+        line-height: 28px;
+        max-width: 100%;
+    }
+    
+    .description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .posted {
+        line-height: 30px;
+        font-size: 14px;
+    }
+    
+    /* Stack ads on tablet */
+    .ad250,
+    .ad600,
+    .ad466 {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        min-height: 200px;
+        margin: 0 auto;
+    }
+    
+    .ad600 {
+        min-height: 300px;
+    }
+    
+    .ad466 {
+        min-height: 250px;
+    }
+    
+    .pagination {
+        max-width: 100%;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+/* Mobile Landscape */
+/* Mobile Landscape & Tablets */
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 16px;
+        padding: 4px 10px;
+        margin-left: 8px;
+    }
+    
+    .row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .stackedStories {
+        width: 100%;
+    }
+    
+    .storyCard {
+        width: 100%;
+    }
+    
+    .imageWrapper {
+        height: 200px;
+    }
+    
+    /* Hide pill on mobile */
+    .pill {
+        display: none;
+    }
+    
+    /* Show category below image on mobile */
+    .categoryBelowImage {
+        display: block;
+    }
+    
+    .storyContent {
+        padding: 0 0 12px 0;
+        gap: 8px;
+    }
+    
+    .headline {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
+    .description {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    
+    .posted {
+        font-size: 13px;
+        line-height: 24px;
+    }
+    
+    .continueBtn {
+        width: 100%;
+        max-width: 200px;
+        min-width: unset;
+        height: 38px;
+        font-size: 12px;
+    }
+    
+    /* Reduce ads on mobile */
+    .ad250 {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+        min-height: unset;
+    }
+    
+    .ad600 {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        min-height: unset;
+    }
+    
+    .ad466 {
+        width: 100%;
+        max-width: 300px;
+        height: 350px;
+        min-height: unset;
+    }
+    
+    .ad250 img,
+    .ad600 img,
+    .ad466 img {
+        object-fit: contain;
+    }
+    
+    .pagination {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    
+    .showingText {
+        font-size: 14px;
+    }
+    
+    .pageControls {
+        gap: 6px;
+        padding: 4px 6px;
+    }
+    
+    .pageNumber {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile Portrait & Small Phones */
+@media screen and (max-width: 480px) {
+    .otherStories {
+        margin: 0 12px 24px;
+        padding: 12px 0;
+    }
+    
+    .heading {
+        font-size: 14px;
+        padding: 3px 8px;
+        margin-left: 4px;
+        border-left-width: 4px;
+    }
+    
+    .rows {
+        gap: 16px;
+    }
+    
+    .row {
+        gap: 16px;
+    }
+    
+    .stackedStories {
+        gap: 16px;
+    }
+    
+    .storyCard {
+        gap: 12px;
+    }
+    
+    .imageWrapper {
+        height: 160px;
+    }
+    
+    .categoryBelowImage {
+        font-size: 11px;
+    }
+    
+    .headline {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    .description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .posted {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    .continueBtn {
+        height: 36px;
+        font-size: 11px;
+        max-width: 160px;
+    }
+    
+    /* Further reduce ads on small phones */
+    .ad250 {
+        height: 150px;
+        max-width: 250px;
+    }
+    
+    .ad600 {
+        height: 300px;
+        max-width: 250px;
+    }
+    
+    .ad466 {
+        height: 250px;
+        max-width: 250px;
+    }
+    
+    .pagination {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .showingText {
+        font-size: 12px;
+    }
+    
+    .pageControls {
+        gap: 4px;
+        padding: 4px;
+    }
+    
+    .pageNumber {
+        width: 20px;
+        height: 20px;
+        font-size: 11px;
+    }
+    
+    .pageArrow {
+        font-size: 11px;
+        padding: 2px 6px;
+    }
+    
+    .ellipsis {
+        font-size: 11px;
+    }
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 360px) {
+    .imageWrapper {
+        height: 140px;
+    }
+    
+    .headline {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    
+    .description {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    
+    .continueBtn {
+        max-width: 140px;
+        height: 32px;
+        font-size: 10px;
+    }
+    
+    .ad250 {
+        height: 120px;
+    }
+    
+    .ad600 {
+        height: 250px;
+    }
+    
+    .ad466 {
+        height: 200px;
+    }
+}
