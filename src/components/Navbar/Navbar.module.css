@@ -177,6 +177,145 @@
 
 
 /* Responsiveness */
+/* ── LARGE SCREENS (1920px+) ── */
+@media (min-width: 1920px) {
+  .topBar {
+    padding: 0 80px;
+    height: 52px;
+  }
+
+  .topLinks {
+    gap: 32px;
+  }
+
+  .topLinks a {
+    font-size: 14px;
+  }
+
+  .date {
+    font-size: 14px;
+  }
+
+  .socials a {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+
+  .mainNav {
+    padding: 0 80px;
+    height: 80px;
+  }
+
+  .mainNavLeft {
+    gap: 48px;
+  }
+
+  .mainLinks {
+    gap: 32px;
+  }
+
+  .mainLinks a {
+    font-size: 16px;
+  }
+
+  .mainNavRight {
+    gap: 24px;
+  }
+
+  .mainNavRight a {
+    font-size: 16px;
+  }
+
+  .searchBtn {
+    font-size: 18px;
+  }
+
+  .logo img {
+    width: 120px;
+    height: 76px;
+  }
+
+  .adBanner img:only-child {
+    max-height: 220px;
+    width: 100%;
+  }
+
+  .adBanner:has(img:nth-child(2)) img {
+    width: 800px;
+    height: 200px;
+  }
+
+  .mainSection {
+    height: 280px;
+  }
+}
+
+/* ── 2K / 4K SCREENS (2560px+) ── */
+@media (min-width: 2560px) {
+  .topBar {
+    padding: 0 160px;
+    height: 60px;
+  }
+
+  .topLinks {
+    gap: 48px;
+  }
+
+  .topLinks a {
+    font-size: 20px;
+  }
+
+  .date {
+    font-size: 20px;
+  }
+
+  .mainNav {
+    padding: 0 160px;
+    height: 100px;
+  }
+
+  .mainNavLeft {
+    gap: 64px;
+  }
+
+  .mainLinks {
+    gap: 40px;
+  }
+
+  .mainLinks a {
+    font-size: 23px;
+  }
+
+  .mainNavRight {
+    gap: 32px;
+        font-size: 38px;
+  }
+
+  .mainNavRight a {
+    font-size: 18px;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 95px;
+  }
+
+  .adBanner img:only-child {
+    max-height: 280px;
+      width: 1500px;
+  }
+
+  .adBanner:has(img:nth-child(2)) img {
+    width: 1000px;
+    height: 240px;
+  }
+
+  .mainSection {
+    height: 360px;
+  }
+}
+
 /* ── LARGE SCREENS (1024px) ── */
 @media (max-width: 1024px) {
   .topLinks {

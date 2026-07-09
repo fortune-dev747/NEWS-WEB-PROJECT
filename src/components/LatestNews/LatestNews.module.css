@@ -142,6 +142,85 @@
   object-fit: cover;
 }
 
+/* RESPONSIVENESS */
+/* ── LARGE SCREENS (1920px+) ── */
+@media (min-width: 1920px) {
+  .latestNews {
+    padding: 0 0px;
+    margin-bottom: 64px;
+  }
+
+  .heading {
+    font-size: 22px;
+    margin-left: 60px;
+  }
+
+  .controls {
+    margin-right: 60px;
+  }
+
+  .card {
+    width: 430px;
+    height: 530px;
+    margin-left: 32px;
+  }
+
+  .pill {
+    bottom: 480px;
+    font-size: 14px;
+  }
+
+  .headline {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .adCard {
+    width: 800px;
+    height: 200px;
+  }
+}
+
+/* ── 2K / 4K SCREENS (2560px+) ── */
+@media (min-width: 2560px) {
+  .latestNews {
+    padding: 0 0px;
+    margin-bottom: 80px;
+  }
+
+  .heading {
+    font-size: 38px;
+    margin-left: 80px;
+    border-left: 9px solid #813D97;
+  }
+
+  .controls {
+    margin-right: 80px;
+  }
+
+  .card {
+    width: 580px;
+    height: 700px;
+    margin-left: 40px;
+  }
+
+  .pill {
+    bottom: 640px;
+    font-size: 16px;
+    padding: 6px 18px;
+  }
+
+  .headline {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .adCard {
+    width: 1100px;
+    height: 280px;
+  }
+}
+
 /* ── LARGE SCREENS (1024px) ── */
 @media (max-width: 1024px) {
   .latestNews {

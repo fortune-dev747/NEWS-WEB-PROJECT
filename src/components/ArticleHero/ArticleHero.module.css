@@ -304,6 +304,212 @@
   object-fit: cover;
 }
 
+/* ── LARGE SCREENS (1920px+) ── */
+@media (min-width: 1920px) {
+  .articleHero {
+    margin: 0 120px 64px;
+    margin-left: 120px;
+    padding: 32px 0;
+  }
+
+  .categoryBtn {
+    width: 160px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .shareBtn {
+    height: 50px;
+    font-size: 18px;
+    padding: 0 24px;
+  }
+
+  .headline {
+    font-size: 42px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .posted, .readTime {
+    font-size: 22px;
+    line-height: 64px;
+  }
+
+  .author {
+    font-size: 22px;
+    line-height: 64px;
+    margin-bottom: 32px;
+  }
+
+  .mainRow {
+    gap: 64px;
+  }
+
+  .leftContent {
+    width: 65%;
+    gap: 32px;
+  }
+
+  .mainImage {
+    width: 100%;
+    height: 700px;
+  }
+
+  .caption {
+    font-size: 15px;
+  }
+
+  .bodyText {
+    font-size: 24px;
+    line-height: 38px;
+    width: 100%;
+  }
+
+  .wideAd {
+    width: 100%;
+    height: 360px;
+  }
+
+  .shareIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sidebar {
+    width: 30%;
+    gap: 32px;
+  }
+
+  .topStoriesBox {
+    width: 100%;
+  }
+
+  .sidebarHeading {
+    font-size: 22px;
+  }
+
+  .storyText {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .redSquare {
+    width: 13px;
+    height: 13px;
+  }
+
+  .adBox {
+    margin-top: 160px;
+    margin-right: 0;
+  }
+
+  .ad463 {
+    width: 100%;
+    height: 620px;
+    margin-left: 0;
+  }
+
+  .ad600 {
+    width: 100%;
+    height: 800px;
+    margin-top: 48px;
+    margin-left: 0;
+  }
+}
+
+/* ── 2K / 4K SCREENS (2560px+) ── */
+@media (min-width: 2560px) {
+  .articleHero {
+    margin: 0 200px 80px;
+    margin-left: 200px;
+    padding: 48px 0;
+  }
+
+  .categoryBtn {
+    width: 200px;
+    height: 64px;
+    font-size: 22px;
+  }
+
+  .shareBtn {
+    height: 64px;
+    font-size: 22px;
+    padding: 0 32px;
+  }
+
+  .headline {
+    font-size: 56px;
+    margin-bottom: 32px;
+  }
+
+  .posted, .readTime {
+    font-size: 28px;
+    line-height: 80px;
+  }
+
+  .author {
+    font-size: 28px;
+    line-height: 80px;
+    margin-bottom: 48px;
+  }
+
+  .mainRow {
+    gap: 80px;
+  }
+
+  .mainImage {
+    width: 100%;
+    height: 940px;
+  }
+
+  .caption {
+    font-size: 18px;
+  }
+
+  .bodyText {
+    font-size: 30px;
+    line-height: 48px;
+  }
+
+  .wideAd {
+    width: 100%;
+    height: 480px;
+  }
+
+  .shareIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sidebarHeading {
+    font-size: 28px;
+  }
+
+  .storyText {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .redSquare {
+    width: 16px;
+    height: 16px;
+  }
+
+  .adBox {
+    margin-top: 200px;
+  }
+
+  .ad463 {
+    width: 100%;
+    height: 840px;
+  }
+
+  .ad600 {
+    width: 100%;
+    height: 1080px;
+    margin-top: 64px;
+  }
+}
 
 /* ── LARGE SCREENS (1024px) ── */
 @media (max-width: 1024px) {

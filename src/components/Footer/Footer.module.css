@@ -118,6 +118,116 @@
   display: none;
 }
 
+/* ── LARGE SCREENS (1920px+) ── */
+@media (min-width: 1920px) {
+  .footer {
+    padding: 48px 0;
+  }
+
+  .container {
+    max-width: 1600px;
+    gap: 48px;
+  }
+
+  .logo {
+    width: 130px;
+    height: 82px;
+  }
+
+  .socials {
+    gap: 24px;
+  }
+
+  .socials a {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .searchBar {
+    height: 64px;
+  }
+
+  .searchInput {
+    height: 64px;
+    font-size: 18px;
+    padding: 0 56px 0 24px;
+  }
+
+  .searchIcon {
+    font-size: 20px;
+    right: 24px;
+  }
+
+  .linksGrid {
+    gap: 28px;
+  }
+
+  .link {
+    font-size: 22px;
+  }
+
+  .copyright {
+    font-size: 16px;
+    padding-top: 32px;
+  }
+}
+
+/* ── 2K / 4K SCREENS (2560px+) ── */
+@media (min-width: 2560px) {
+  .footer {
+    padding: 64px 0;
+  }
+
+  .container {
+    max-width: 2200px;
+    gap: 64px;
+  }
+
+  .logo {
+    width: 180px;
+    height: 114px;
+  }
+
+  .socials {
+    gap: 32px;
+  }
+
+  .socials a {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .searchBar {
+    height: 80px;
+  }
+
+  .searchInput {
+    height: 80px;
+    font-size: 22px;
+    padding: 0 72px 0 32px;
+  }
+
+  .searchIcon {
+    font-size: 26px;
+    right: 32px;
+  }
+
+  .linksGrid {
+    gap: 40px;
+  }
+
+  .link {
+    font-size: 28px;
+  }
+
+  .copyright {
+    font-size: 20px;
+    padding-top: 48px;
+  }
+}
+
 /* ── LARGE SCREENS (1024px) ── */
 @media (max-width: 1024px) {
   .container {

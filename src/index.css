@@ -31,3 +31,15 @@ a {
   color: inherit;
 }
 
+/* ── 2K / 4K SCREENS (1920px and above) ── */
+@media (min-width: 1920px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 2560px) {
+  body {
+    font-size: 22px;
+  }
+}

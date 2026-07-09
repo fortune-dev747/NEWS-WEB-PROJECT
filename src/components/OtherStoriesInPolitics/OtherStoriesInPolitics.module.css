@@ -232,6 +232,204 @@
 }
 
 
+/* ── LARGE SCREENS (1920px+) ── */
+@media (min-width: 1920px) {
+  .otherStories {
+    margin: 0 120px 64px;
+    margin-left: 120px;
+    padding: 32px 0;
+  }
+
+  .heading {
+    font-size: 22px;
+    margin-left: 20px;
+    margin-bottom: 32px;
+  }
+
+  .rows {
+    gap: 32px;
+  }
+
+  .storyCard {
+    width: 1400px;
+    height: 400px;
+    gap: 32px;
+  }
+
+  .imageWrapper {
+    width: 600px;
+    height: 400px;
+  }
+
+  .pill {
+    font-size: 14px;
+    padding: 6px 18px;
+  }
+
+  .storyContent {
+    padding: 32px 32px 32px 0;
+    gap: 14px;
+  }
+
+  .headline {
+    font-size: 30px;
+    line-height: 42px;
+    width: 100%;
+  }
+
+  .posted {
+    font-size: 18px;
+    line-height: 60px;
+  }
+
+  .description {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .continueBtn {
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .ad250 {
+    width: 400px;
+    height: 340px;
+  }
+
+  .ad600 {
+    width: 400px;
+    height: 800px;
+  }
+
+  .ad466 {
+    width: 320px;
+    height: 620px;
+    margin-left: 80px;
+  }
+
+  .pagination {
+    width: 700px;
+    margin-top: 96px;
+    margin-bottom: 96px;
+    margin-left: 40px;
+  }
+
+  .showingText {
+    font-size: 18px;
+  }
+
+  .pageNumber {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .ellipsis {
+    font-size: 16px;
+  }
+}
+
+/* ── 2K / 4K SCREENS (2560px+) ── */
+@media (min-width: 2560px) {
+  .otherStories {
+    margin: 0 0px 80px;
+    margin-left: 50px;
+    padding: 48px 0;
+  }
+
+  .heading {
+    font-size: 28px;
+    margin-left: 24px;
+    margin-bottom: 48px;
+  }
+
+  .rows {
+    gap: 48px;
+  }
+
+  .storyCard {
+    width: 1900px;
+    height: 540px;
+    gap: 48px;
+  }
+
+  .imageWrapper {
+    width: 820px;
+    height: 540px;
+  }
+
+  .pill {
+    font-size: 18px;
+    padding: 8px 22px;
+  }
+
+  .storyContent {
+    padding: 48px 48px 48px 0;
+    gap: 18px;
+  }
+
+  .headline {
+    font-size: 40px;
+    line-height: 54px;
+    width: 100%;
+  }
+
+  .posted {
+    font-size: 22px;
+    line-height: 70px;
+  }
+
+  .description {
+    font-size: 30px;
+    line-height: 44px;
+  }
+
+  .continueBtn {
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .ad250 {
+    width: 540px;
+    height: 450px;
+  }
+
+  .ad600 {
+    width: 540px;
+    height: 1080px;
+  }
+
+  .ad466 {
+    width: 420px;
+    height: 840px;
+    margin-left: 100px;
+  }
+
+  .pagination {
+    width: 900px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    margin-left: 48px;
+  }
+
+  .showingText {
+    font-size: 22px;
+  }
+
+  .pageNumber {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .ellipsis {
+    font-size: 20px;
+  }
+}
+
 /* ── LARGE SCREENS (1024px) ── */
 @media (max-width: 1024px) {
   .otherStories {
