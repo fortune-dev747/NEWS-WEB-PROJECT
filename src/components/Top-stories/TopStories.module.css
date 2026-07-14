@@ -1,145 +1,159 @@
 .topStories {
-    display: flex;
-    flex-direction: column;
-    padding: 48px 56px;
-    margin-bottom: 48px;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 56px;
+  margin-bottom: 48px;
+  gap: 24px;
 }
 
 
 .heading {
-    font-family: var(--font-body);
-    font-size: 28px;
-    font-weight: 700;
-    color: #282828;
-    margin-left: 40px;
-    line-height: 100%;
-    letter-spacing: 0%;
+  font-family: var(--font-body);
+  font-size: 28px;
+  font-weight: 700;
+  color: #282828;
+  margin-left: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .storiesGrid {
-    display: flex;
-    gap: 16px;
-    margin-left: 20px;
+  display: flex;
+  gap: 16px;
+  margin-left: 20px;
 }
 
 /* Large Left Image */
 .mainStory {
-    position: relative;
-    width: 670px;
-    height: 448px;
-    flex-shrink: 0;
-    border-radius: 3px;
-    overflow: hidden;
+  position: relative;
+  width: 670px;
+  height: 448px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .mainStory img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .mainOverlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .mainOverlay .tag {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .mainDesc {
-    color: #FFFFFF;
-    font-family: var(--font-ui);
-    font-size: 24px;
-    line-height: 35px;
-    font-weight: 600;
-    letter-spacing: 0%;
+  color: #FFFFFF;
+  font-family: var(--font-ui);
+  font-size: 24px;
+  line-height: 35px;
+  font-weight: 600;
+  letter-spacing: 0%;
 }
 
 /* Right Side */
 .rightSide {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
 }
 
 .squareRow {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 
 /* Square Stories */
 .squareStory {
-    width: 322px;
-    height: 245px;
-    flex-shrink: 0;
-    position: relative;
-    border-radius: 3px;
-    overflow: hidden;
+  width: 322px;
+  height: 245px;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .squareStory img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
 /* Bottom Story */
 
 .bottomStory {
-    position: relative;
-    width: 660px;
-    height: 186px;
-    border-radius: 3px;
-    overflow: hidden;
+  position: relative;
+  width: 660px;
+  height: 186px;
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .bottomStory img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Shared */
 .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 14px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 14px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .overlay .tag {
-    color: var(--accent);
-    font-family: var(--font-ui);
-    font-size: 13px;
-    line-height: 100%;
-    font-weight: 700;
-    letter-spacing: 0%;
+  color: var(--accent);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 100%;
+  font-weight: 700;
+  letter-spacing: 0%;
 }
 
 .overlay .desc {
-    color: #FFFFFF;
-    font-family: var(--font-ui);
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 600;
-    letter-spacing: 0%;
+  color: #FFFFFF;
+  font-family: var(--font-ui);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: 0%;
+}
+
+.loading {
+  padding: 48px 56px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.error {
+  padding: 48px 56px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--accent);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -235,53 +249,53 @@
 
 /* Tablet (1024px) */
 @media (max-width: 1024px) {
-    .topStories {
-        padding: 32px 24px;
-    }
+  .topStories {
+    padding: 32px 24px;
+  }
 
-    .heading {
-        font-size: 24px;
-        margin-left: 0;
-    }
+  .heading {
+    font-size: 24px;
+    margin-left: 0;
+  }
 
-    .storiesGrid {
-        flex-direction: column;
-        margin-left: 0;
-    }
+  .storiesGrid {
+    flex-direction: column;
+    margin-left: 0;
+  }
 
-    .mainStory {
-        width: 100%;
-        height: 350px;
-    }
+  .mainStory {
+    width: 100%;
+    height: 350px;
+  }
 
-    .mainDesc {
-        font-size: 20px;
-        line-height: 28px;
-    }
+  .mainDesc {
+    font-size: 20px;
+    line-height: 28px;
+  }
 
-    .squareRow {
-        gap: 12px;
-    }
+  .squareRow {
+    gap: 12px;
+  }
 
-    .squareStory {
-        width: 50%;
-        height: 200px;
-    }
+  .squareStory {
+    width: 50%;
+    height: 200px;
+  }
 
-    .bottomStory {
-        width: 100%;
-        height: 180px;
-    }
+  .bottomStory {
+    width: 100%;
+    height: 180px;
+  }
 
-    .overlay .desc {
-        font-size: 17px;
-        line-height: 24px;
-    }
+  .overlay .desc {
+    font-size: 17px;
+    line-height: 24px;
+  }
 }
 
 /* Mobile (768px) */
 @media (max-width: 767px) {
-      .mainStory {
+  .mainStory {
     width: 100%;
     height: auto;
     position: static;
@@ -315,6 +329,7 @@
     font-size: 16px;
     line-height: 24px;
   }
+
   .squareRow {
     flex-direction: column;
     gap: 16px;
@@ -404,6 +419,7 @@
 
 /* Small Mobile (375px) */
 @media (max-width: 375px) {
+
   .squareStory img,
   .bottomStory img {
     width: 100px;
