@@ -170,6 +170,15 @@
   border-radius: 3px;
   flex-shrink: 0;
 }
+
+@media (width: 1280px) {
+  .border {
+    right: 480px;
+    height: 600px;
+  }
+}
+
+
 /* ── LARGE SCREENS (1920px+) ── */
 @media (min-width: 1920px) {
   .business {
