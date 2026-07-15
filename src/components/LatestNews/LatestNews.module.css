@@ -59,22 +59,24 @@
 }
 
 /* Cards */
+/* Base card styles */
 .cards {
   display: flex;
   gap: 0;
-  width: fit-content;
+  width: 100%;
 }
 
 .card {
   position: relative;
-  width: 321px;
+  flex: 1;
   height: 397px;
-  flex-shrink: 0;
   overflow: hidden;
   border-right: 1px solid #999999;
   margin-left: 25px;
   border-radius: 13px;
+  min-width: 0;
 }
+
 
 .card:last-child {
   border-right: none;
@@ -140,6 +142,33 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.loading {
+  padding: 24px 49px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.error {
+  padding: 24px 49px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--accent);
+}
+
+/* Mobile/Tablet Scrollable Cards */
+.mobileCards {
+  display: none;
+}
+
+.desktopControls {
+  display: flex;
+}
+
+.mobileControls {
+  display: none;
 }
 
 /* RESPONSIVENESS */
@@ -258,7 +287,7 @@
 }
 
 /* ── TABLET (768px) ── */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .latestNews {
     padding: 0 16px;
     border-top: 1px solid #E0E0E0;
@@ -272,7 +301,7 @@
   }
 
   .controls {
-    margin-right: 0;
+    display: none;
   }
 
   .arrow {
@@ -280,13 +309,11 @@
   }
 
   .cards {
-    width: 100%;
-    overflow-x: auto;
-    padding-bottom: 8px;
+    display: none;
   }
 
   .card {
-    width: 240px;
+    flex: 1;
     height: 300px;
     margin-left: 12px;
     border-radius: 8px;
@@ -315,14 +342,60 @@
     width: 100%;
     height: 100px;
   }
+
+  .mobileCards {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobileCards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobileCard {
+    position: relative;
+    width: 260px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    scroll-snap-align: start;
+  }
+
+  .mobileCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .desktopControls {
+    display: none;
+  }
+
+  .mobileControls {
+    display: flex;
+    gap: 6px;
+    margin-right: 0;
+  }
+
+  .mobileControls .dot {
+    cursor: pointer;
+  }
 }
 
 /* ── MOBILE (375px) ── */
 @media (max-width: 375px) {
   .card {
-    width: 200px;
     height: 260px;
     margin-left: 10px;
+  }
+
+  .card:first-child {
+    margin-left: 0;
   }
 
   .pill {
@@ -338,5 +411,10 @@
 
   .adCard {
     height: 80px;
+  }
+
+  .mobileCard {
+    width: 220px;
+    height: 260px;
   }
 }
