@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import styles from './MoreStories.module.css'
 import { FaCrown } from 'react-icons/fa'
 import { getEditorPicks } from '../../api/api'
+import MoreStoriesSkeleton from './MoreStoriesSkeleton'
 
 export default function MoreStories() {
   const [mainStory, setMainStory] = useState(null)
@@ -23,7 +24,7 @@ export default function MoreStories() {
       })
   }, [])
 
-  if (loading) return <div className={styles.loading}>Loading...</div>
+  if (loading) return <MoreStoriesSkeleton />
   if (error) return <div className={styles.error}>Failed to load stories.</div>
   if (!mainStory) return null
 

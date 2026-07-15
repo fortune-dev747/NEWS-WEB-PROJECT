@@ -1,20 +1,53 @@
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import styles from './ArticleHero.module.css'
 import { FaShareAlt } from 'react-icons/fa'
+import { getStory, getTopStories } from '../../api/api'
 
 export default function ArticleHero() {
-  const topStories = [
-    'Binance: Nigeria orders cryptocurrency firm to pay $10bn',
-    'Rivers Community Protests Alleged Killing Of Indigenes By Militia',
-    'Foden Sparkles As Man City Crush Spineless Man United',
-    'Zamfara Verifies 3,079 Retirees, Settles N2.3bn Gratuity Backlog',
-  ]
+  const { id } = useParams()
+  const [story, setStory] = useState(null)
+  const [topStories, setTopStories] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    Promise.all([
+      getStory(id),
+      getTopStories()
+    ])
+      .then(([storyRes, topStoriesRes]) => {
+        setStory(storyRes.data)
+        const valid = topStoriesRes.data.data
+          .filter(item => item.story !== null)
+          .slice(0, 4)
+          .map(item => item.story)
+        setTopStories(valid)
+        setLoading(false)
+      })
+      .catch(err => {
+        setError(err.message)
+        setLoading(false)
+      })
+  }, [id])
+
+  const formatDate = (dateStr) => {
+    return new Date(dateStr).toLocaleDateString('en-US', {
+      hour: '2-digit', minute: '2-digit',
+      weekday: 'short', month: 'long', day: 'numeric', year: 'numeric'
+    })
+  }
+
+  if (loading) return <div className={styles.loading}>Loading...</div>
+  if (error) return <div className={styles.error}>Failed to load article.</div>
+  if (!story) return null
 
   return (
     <article className={styles.articleHero}>
 
       {/* Buttons Row */}
       <div className={styles.buttonsRow}>
-        <button className={styles.categoryBtn}>World News</button>
+        <button className={styles.categoryBtn}>{story.category.category_name}</button>
         <button className={styles.shareBtn}>
           <FaShareAlt className={styles.shareIcon} />
           <span>Share</span>
@@ -22,15 +55,17 @@ export default function ArticleHero() {
       </div>
 
       {/* Headline */}
-      <h1 className={styles.headline}>Putin promises grains, debt write-off as Russia seeks Africa allies</h1>
+      <h1 className={styles.headline}>{story.title}</h1>
 
       {/* Meta */}
       <div className={styles.meta}>
-        <span className={styles.posted}>Posted 1:32 AM, Sun March 10, 2024</span>
+        <span className={styles.posted}>{formatDate(story.created_at)}</span>
         <span className={styles.dot}></span>
-        <span className={styles.readTime}>4 minute read</span>
+        <span className={styles.readTime}>
+          {Math.ceil(story.content.replace(/<[^>]+>/g, '').split(' ').length / 200)} minute read
+        </span>
       </div>
-      <p className={styles.author}>By Ogechi Joseph</p>
+      <p className={styles.author}>By {story.author}</p>
 
       {/* Main Content Row */}
       <div className={styles.mainRow}>
@@ -40,20 +75,20 @@ export default function ArticleHero() {
 
           {/* Large Image */}
           <div className={styles.mainImage}>
-            <img src="/images/other-stories/Putin.png" alt="Article" />
+            <img src={story.banner_image} alt={story.title} />
           </div>
-          <p className={styles.caption}>Russia-Africa-Forum. Photo: Getty Images</p>
+          <p className={styles.caption}>{story.subtitle}</p>
 
-          {/* First Body Text */}
-          <p className={styles.bodyText}>Former President John Dramani Mahama has emphasized the importance of education to the country's development, noting that the sector consistently receives a significant portion of budgetary allocations from every government. <br></br>  <br></br>  He highlighted that the education sector remains instrumental in producing human capital for accelerated development. Mahama expressed appreciation for individuals who contribute their resources to supplement the government's efforts in educating the youth. <br></br>  <br></br>  Mahama made these remarks on Saturday at the 40th Anniversary of the enstoolment of Togbe Dzegblade IV of Adaklu Kodzobi. His address was delivered by Mr. Kwame Agbodza, the Member of Parliament of Adaklu. <br></br>  <br></br>  He commended Togbe Dzegblade for establishing an educational fund to assist brilliant but needy students in the area.</p>
+          {/* Article Body */}
+          <div
+            className={styles.bodyText}
+            dangerouslySetInnerHTML={{ __html: story.content }}
+          />
 
           {/* Wide Ad */}
           <div className={styles.wideAd}>
             <img src="/images/other-stories/single-ad2.png" alt="Advertisement" />
           </div>
-
-          {/* Second Body Text */}
-          <p className={styles.bodyText}>The former President urged students to take advantage of the fund to enhance their skills. <br></br>  <br></br>  Mahama noted that prior to the political dispensation, chiefs played a prominent role in community leadership, ensuring development in their respective areas. <br></br>  <br></br>  He applauded Togbe Dzegblade for his 40-year tenure on the stool without chieftaincy disputes, which contributed to the rapid development of the community. <br></br>  <br></br>  Togbe Gbogbi Atsa V, Paramount Chief and President of the Adaklu Traditional Council, praised Togbe Dzegblade for his significant contributions to the development of Adaklu across various sectors. <br></br>  <br></br>  "I commend you for your hard work and excellent demonstration of neighbourliness that have helped to establish and maintain peaceful coexistence with other traditional areas," he stated.</p>
 
           {/* Share Icons */}
           <div className={styles.shareIcons}>
@@ -74,10 +109,10 @@ export default function ArticleHero() {
           <div className={styles.topStoriesBox}>
             <h3 className={styles.sidebarHeading}>TOP STORIES</h3>
             <ul className={styles.storyList}>
-              {topStories.map((story, index) => (
-                <li key={index} className={styles.storyItem}>
+              {topStories.map(s => (
+                <li key={s.id} className={styles.storyItem}>
                   <span className={styles.redSquare}></span>
-                  <p className={styles.storyText}>{story}</p>
+                  <p className={styles.storyText}>{s.title}</p>
                 </li>
               ))}
             </ul>

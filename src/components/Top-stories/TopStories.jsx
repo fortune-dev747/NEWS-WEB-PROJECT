@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './TopStories.module.css'
 import { getTopStories } from '../../api/api'
+import TopStoriesSkeleton from './TopStoriesSkeleton'
 
 export default function TopStories({ heading = 'TOP STORIES' }) {
   const [stories, setStories] = useState([])
@@ -20,7 +21,7 @@ export default function TopStories({ heading = 'TOP STORIES' }) {
       })
   }, [])
 
-  if (loading) return <div className={styles.loading}>Loading...</div>
+  if (loading) return <TopStoriesSkeleton />
   if (error) return <div className={styles.error}>Failed to load stories.</div>
   if (stories.length === 0) return null
 
@@ -38,7 +39,7 @@ export default function TopStories({ heading = 'TOP STORIES' }) {
         {/* Large Left Image */}
         {mainStory && (
           <div className={styles.mainStory}>
-            <Link to={`/politics/${mainStory.id}`}><img src={mainStory.banner_image} alt={mainStory.title} /></Link>
+            <Link to={`/story/${mainStory.id}`}><img src={mainStory.banner_image} alt={mainStory.title} /></Link>
             <div className={styles.mainOverlay}>
               <span className={styles.tag}>LATEST TODAY</span>
               <p className={styles.mainDesc}>{mainStory.title}</p>

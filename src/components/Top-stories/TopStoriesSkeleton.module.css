@@ -1,0 +1,69 @@
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 56px;
+  margin-bottom: 48px;
+  gap: 24px;
+}
+
+.heading {
+  width: 200px;
+  height: 32px;
+  border-radius: 4px;
+  margin-left: 40px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.grid {
+  display: flex;
+  gap: 16px;
+  margin-left: 20px;
+}
+
+.mainStory {
+  width: 670px;
+  height: 448px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.squareRow {
+  display: flex;
+  gap: 16px;
+}
+
+.square {
+  width: 322px;
+  height: 245px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.bottom {
+  width: 660px;
+  height: 186px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 1.5s infinite;
+}

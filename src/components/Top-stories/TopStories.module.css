@@ -142,13 +142,6 @@
   letter-spacing: 0%;
 }
 
-.loading {
-  padding: 48px 56px;
-  font-family: var(--font-body);
-  font-size: 16px;
-  color: var(--text-secondary);
-}
-
 .error {
   padding: 48px 56px;
   font-family: var(--font-body);

@@ -1,34 +1,38 @@
+import { useState, useEffect } from 'react'
 import styles from './Politics.module.css'
 import { FaChevronRight } from 'react-icons/fa6'
+import { getCategoryStories } from '../../api/api'
+import PoliticsSkeleton from './PoliticsSkeleton'
 
 export default function Politics() {
-  const sideStories = [
-    {
-      id: 1,
-      image: '/images/politics/fuel-petrol.jpg',
-      headline: 'Foden Sparkles As Man City Crush Spineless Man United',
-    },
-    {
-      id: 2,
-      image: '/images/politics/fuel-petrol.jpg',
-      headline: 'Foden Sparkles As Man City Crush Spineless Man United',
-    },
-    {
-      id: 3,
-      image: '/images/politics/fuel-petrol.jpg',
-      headline: 'Foden Sparkles As Man City Crush Spineless Man United',
-    },
-    {
-      id: 4,
-      image: '/images/politics/fuel-petrol.jpg',
-      headline: 'Foden Sparkles As Man City Crush Spineless Man United',
-    },
-    {
-      id: 5,
-      image: '/images/politics/fuel-petrol.jpg',
-      headline: 'Foden Sparkles As Man City Crush Spineless Man United',
-    },
-  ]
+  const [mainStory, setMainStory] = useState(null)
+  const [sideStories, setSideStories] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    getCategoryStories(1)
+      .then(res => {
+        const stories = res.data.data
+        setMainStory(stories[0])
+        setSideStories(stories.slice(1))
+        setLoading(false)
+      })
+      .catch(err => {
+        setError(err.message)
+        setLoading(false)
+      })
+  }, [])
+
+  const formatDate = (dateStr) => {
+    return new Date(dateStr).toLocaleDateString('en-US', {
+      month: 'short', day: 'numeric', year: 'numeric'
+    })
+  }
+
+  if (loading) return <PoliticsSkeleton />
+  if (error) return <div className={styles.error}>Failed to load stories.</div>
+  if (!mainStory) return null
 
   return (
     <section className={styles.politics}>
@@ -44,36 +48,34 @@ export default function Politics() {
 
         {/* Main Image */}
         <div className={styles.mainImage}>
-          <img src="/images/politics/fuel-petrol.jpg" alt="Politics" />
+          <img src={mainStory.banner_image} alt={mainStory.title} />
         </div>
 
         {/* Headline & Description */}
         <div className={styles.textContent}>
-          <h3 className={styles.headline}>Falana Asks FG To Review Fuel Subsidy Removal</h3>
-          <p className={styles.description}>Human rights lawyer Femi Falana (SAN) wants the Federal Government to review the fuel subsidy removal policy owing to claims that Nigeria is still paying for it.</p>
+          <h3 className={styles.headline}>{mainStory.title}</h3>
+          <p className={styles.description}>{mainStory.description}</p>
         </div>
 
         {/* Author Row */}
         <div className={styles.authorRow}>
           <span className={styles.authorDot}></span>
-          <span className={styles.authorName}>Ogechi Joseph</span>
+          <span className={styles.authorName}>{mainStory.author}</span>
           <span className={styles.authorDot}></span>
-          <span className={styles.time}>Posted 13 mins ago</span>
+          <span className={styles.time}>{formatDate(mainStory.created_at)}</span>
         </div>
 
       </div>
 
-      <div className={styles.border}>
-
-      </div>
+      <div className={styles.border}></div>
 
       {/* Right Side */}
       <div className={styles.rightSide}>
         {sideStories.map(story => (
           <div key={story.id} className={styles.storyItem}>
             <span className={styles.redSquare}></span>
-            <p className={styles.storyText}>{story.headline}</p>
-            <img src={story.image} alt={story.headline} className={styles.storyImage} />
+            <p className={styles.storyText}>{story.title}</p>
+            <img src={story.banner_image} alt={story.title} className={styles.storyImage} />
           </div>
         ))}
       </div>

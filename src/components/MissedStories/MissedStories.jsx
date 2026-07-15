@@ -1,33 +1,36 @@
+import { useState, useEffect } from 'react'
 import styles from './MissedStories.module.css'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
+import { getMissedStories } from '../../api/api'
 
 export default function MissedStories() {
-  const stories = [
-    {
-      id: 1,
-      headline: 'Binance: Nigeria orders cryptocurrency firm to pay $10bn',
-      date: 'Feb 29, 2024',
-      category: 'Finance',
-    },
-    {
-      id: 2,
-      headline: 'Rivers Community Protests Alleged Killing Of Indigenes By Militia',
-      date: 'Feb 29, 2024',
-      category: 'Finance',
-    },
-    {
-      id: 3,
-      headline: 'Former NGX Group Chairman Abimbola Ogunbanjo Laid To Rest',
-      date: 'Feb 29, 2024',
-      category: 'Finance',
-    },
-    {
-      id: 4,
-      headline: 'Foden Sparkles As Man City Crush Spineless Man United',
-      date: 'Feb 29, 2024',
-      category: 'Finance',
-    },
-  ]
+  const [stories, setStories] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    getMissedStories()
+      .then(res => {
+        setStories(res.data.data.slice(0, 4))
+        setLoading(false)
+      })
+      .catch(err => {
+        setError(err.message)
+        setLoading(false)
+      })
+  }, [])
+
+  const formatDate = (dateStr) => {
+    return new Date(dateStr).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    })
+  }
+
+  if (loading) return <div className={styles.loading}>Loading...</div>
+  if (error) return <div className={styles.error}>Failed to load stories.</div>
+  if (stories.length === 0) return null
 
   return (
     <section className={styles.missedStories}>
@@ -51,23 +54,22 @@ export default function MissedStories() {
           <div key={story.id} className={styles.card}>
             <div className={styles.topRow}>
               <span className={styles.blackSquare}></span>
-              <p className={styles.headline}>{story.headline}</p>
+              <p className={styles.headline}>{story.title}</p>
             </div>
             <div className={styles.metaRow}>
               <span className={styles.redDot}></span>
-              <span className={styles.date}>{story.date}</span>
+              <span className={styles.date}>{formatDate(story.created_at)}</span>
               <span className={styles.redDot}></span>
-              <span className={styles.category}>{story.category}</span>
+              <span className={styles.category}>{story.category.category_name}</span>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Show More Button */}
+      {/* Show More Button — mobile only */}
       <div className={styles.showMoreBtn}>
         <button className={styles.showMorePill}>Show More</button>
       </div>
-
 
       {/* Bottom Section */}
       <div className={styles.bottomSection}>

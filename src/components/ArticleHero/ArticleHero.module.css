@@ -295,13 +295,36 @@
   overflow: hidden;
   border-radius: 3px;
   margin-top: 350px;
-  margin-left: 60px;
+  margin-left: 110px;
 }
 
 .ad600 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.loading {
+  padding: 48px 90px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.error {
+  padding: 48px 90px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--accent);
+}
+
+.bodyText p {
+  margin-bottom: 16px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: #282828;
+  line-height: 30px;
 }
 
 /* ── LARGE SCREENS (1920px+) ── */

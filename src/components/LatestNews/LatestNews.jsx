@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './LatestNews.module.css'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import { getLatestStories } from '../../api/api'
+import LatestNewsSkeleton from './LatestNewsSkeleton'
+
 
 export default function LatestNews({ heading = 'LATEST NEWS' }) {
   const [stories, setStories] = useState([])
@@ -64,7 +66,7 @@ export default function LatestNews({ heading = 'LATEST NEWS' }) {
     currentIndex * visibleCount + visibleCount
   )
 
-  if (loading) return <div className={styles.loading}>Loading...</div>
+  if (loading) return <LatestNewsSkeleton />
   if (error) return <div className={styles.error}>Failed to load stories.</div>
   if (stories.length === 0) return null
 
