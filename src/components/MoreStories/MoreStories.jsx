@@ -1,21 +1,38 @@
+import { useState, useEffect } from 'react'
 import styles from './MoreStories.module.css'
 import { FaCrown } from 'react-icons/fa'
+import { getEditorPicks } from '../../api/api'
 
 export default function MoreStories() {
-  const stories = [
-    'Binance: Nigeria orders cryptocurrency firm to pay $10bn',
-    'Rivers Community Protests Alleged Killing Of Indigenes By Militia',
-    'Former NGX Group Chairman Abimbola Ogunbanjo Laid To Rest',
-    'Foden Sparkles As Man City Crush Spineless Man United',
-    'Zamfara Verifies 3,079 Retirees, Settles N2.3bn Gratuity Backlog',
-  ]
+  const [mainStory, setMainStory] = useState(null)
+  const [sideStories, setSideStories] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    getEditorPicks()
+      .then(res => {
+        const valid = res.data.data.filter(item => item.story !== null)
+        setMainStory(valid[0]?.story)
+        setSideStories(valid.slice(1, 6).map(item => item.story))
+        setLoading(false)
+      })
+      .catch(err => {
+        setError(err.message)
+        setLoading(false)
+      })
+  }, [])
+
+  if (loading) return <div className={styles.loading}>Loading...</div>
+  if (error) return <div className={styles.error}>Failed to load stories.</div>
+  if (!mainStory) return null
 
   return (
     <section className={styles.moreStories}>
 
       {/* Left Large Card */}
       <div className={styles.leftCard}>
-        <img src="/images/more-stories/dangote.jpg" alt="Editor's Pick" />
+        <img src={mainStory.banner_image} alt={mainStory.title} />
         <div className={styles.badge}>
           <span className={styles.crownCircle}>
             <FaCrown className={styles.crownIcon} />
@@ -23,11 +40,11 @@ export default function MoreStories() {
           <span>Editor's Pick</span>
         </div>
         <div className={styles.leftContent}>
-          <h2 className={styles.headline}>Dangote Refinery's second crude oil shipment leaves US for Nigeria</h2>
-          <p className={styles.subHeadline}>First cargo to arrive next week</p>
+          <h2 className={styles.headline}>{mainStory.title}</h2>
+          <p className={styles.subHeadline}>{mainStory.subtitle}</p>
           <div className={styles.author}>
             <span className={styles.authorDot}></span>
-            <span className={styles.authorName}>Ogechi Joseph</span>
+            <span className={styles.authorName}>{mainStory.author}</span>
           </div>
         </div>
       </div>
@@ -36,10 +53,10 @@ export default function MoreStories() {
       <div className={styles.rightSide}>
         <h3 className={styles.rightHeading}>MORE STORIES</h3>
         <ul className={styles.storyList}>
-          {stories.map((story, index) => (
-            <li key={index} className={styles.storyItem}>
+          {sideStories.map(story => (
+            <li key={story.id} className={styles.storyItem}>
               <span className={styles.redSquare}></span>
-              <p className={styles.storyText}>{story}</p>
+              <p className={styles.storyText}>{story.title}</p>
             </li>
           ))}
         </ul>
