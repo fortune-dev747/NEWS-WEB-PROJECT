@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import styles from './ArticleHero.module.css'
 import { FaShareAlt } from 'react-icons/fa'
 import { getStory, getTopStories } from '../../api/api'
+import ArticleHeroSkeleton from './ArticleHeroSkeleton'
 
 export default function ArticleHero() {
   const { id } = useParams()
@@ -38,7 +39,7 @@ export default function ArticleHero() {
     })
   }
 
-  if (loading) return <div className={styles.loading}>Loading...</div>
+  if (loading) return <ArticleHeroSkeleton />
   if (error) return <div className={styles.error}>Failed to load article.</div>
   if (!story) return null
 

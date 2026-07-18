@@ -90,3 +90,144 @@
   flex-shrink: 0;
   composes: shimmer;
 }
+
+/* ── LARGE SCREENS (1920px+) ── */
+@media (min-width: 1920px) {
+  .skeleton {
+    margin: 0 120px 64px;
+    padding: 32px;
+    gap: 40px;
+  }
+
+  .leftSide {
+    width: 60%;
+  }
+
+  .mainImage {
+    height: 600px;
+  }
+
+  .title {
+    height: 36px;
+  }
+
+  .titleShort {
+    height: 36px;
+  }
+
+  .description {
+    height: 24px;
+  }
+
+  .rightSide {
+    width: 40%;
+    padding-top: 64px;
+    padding-left: 48px;
+  }
+
+  .storyText {
+    height: 70px;
+  }
+
+  .storyImage {
+    width: 220px;
+    height: 120px;
+  }
+}
+
+/* ── TABLET (768px) ── */
+@media (max-width: 768px) {
+  .skeleton {
+    flex-direction: column;
+    margin: 0 16px 32px;
+    padding: 16px;
+    gap: 24px;
+  }
+
+  .leftSide {
+    width: 100%;
+  }
+
+  .mainImage {
+    height: 260px;
+  }
+
+  .title {
+    height: 22px;
+  }
+
+  .titleShort {
+    height: 22px;
+    width: 80%;
+  }
+
+  .description {
+    height: 16px;
+  }
+
+  .rightSide {
+    width: 100%;
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .storyText {
+    height: 44px;
+  }
+
+  .storyImage {
+    width: 100px;
+    height: 70px;
+  }
+}
+
+/* ── MOBILE (375px) ── */
+@media (max-width: 375px) {
+  .skeleton {
+    margin: 0 12px 24px;
+    padding: 12px;
+  }
+
+  .mainImage {
+    height: 200px;
+  }
+
+  .title {
+    height: 18px;
+  }
+
+  .titleShort {
+    height: 18px;
+  }
+
+  .storyText {
+    height: 36px;
+  }
+
+  .storyImage {
+    width: 80px;
+    height: 60px;
+  }
+
+  .author {
+    width: 140px;
+    height: 14px;
+  }
+}
+
+/* ── SMALL MOBILE (320px) ── */
+@media (max-width: 320px) {
+  .skeleton {
+    margin: 0 8px 20px;
+    padding: 10px;
+  }
+
+  .mainImage {
+    height: 170px;
+  }
+
+  .storyImage {
+    width: 70px;
+    height: 50px;
+  }
+}

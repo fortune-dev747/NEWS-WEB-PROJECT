@@ -1,0 +1,311 @@
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton {
+  margin: 0 50px 48px;
+  padding: 24px 0;
+  margin-left: 90px;
+}
+
+/* Buttons Row */
+.buttonsRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.categoryBtn {
+  width: 129px;
+  height: 40px;
+  border-radius: 22px;
+  composes: shimmer;
+}
+
+.shareBtn {
+  width: 100px;
+  height: 40px;
+  border-radius: 22px;
+  composes: shimmer;
+}
+
+/* Headline */
+.headline {
+  width: 90%;
+  height: 40px;
+  margin-bottom: 12px;
+  composes: shimmer;
+}
+
+.headlineShort {
+  width: 60%;
+  height: 40px;
+  margin-bottom: 16px;
+  composes: shimmer;
+}
+
+/* Meta */
+.meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.metaItem {
+  width: 160px;
+  height: 20px;
+  composes: shimmer;
+}
+
+.author {
+  width: 140px;
+  height: 20px;
+  margin-bottom: 24px;
+  composes: shimmer;
+}
+
+/* Main Row */
+.mainRow {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* Left Content */
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 890px;
+  flex-shrink: 0;
+}
+
+.mainImage {
+  width: 100%;
+  height: 516px;
+  border-radius: 3px;
+  composes: shimmer;
+}
+
+.caption {
+  width: 200px;
+  height: 14px;
+  composes: shimmer;
+}
+
+.bodyText {
+  width: 100%;
+  height: 20px;
+  composes: shimmer;
+}
+
+.bodyTextShort {
+  width: 75%;
+  height: 20px;
+  composes: shimmer;
+}
+
+.wideAd {
+  width: 100%;
+  height: 267px;
+  border-radius: 3px;
+  composes: shimmer;
+}
+
+.shareIcons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.shareIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  composes: shimmer;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.sidebarHeading {
+  width: 120px;
+  height: 24px;
+  composes: shimmer;
+}
+
+.storyItem {
+  width: 100%;
+  height: 56px;
+  composes: shimmer;
+}
+
+.ad463 {
+  width: 100%;
+  height: 463px;
+  border-radius: 3px;
+  composes: shimmer;
+}
+
+.ad600 {
+  width: 100%;
+  height: 300px;
+  border-radius: 3px;
+  composes: shimmer;
+}
+
+/* ── LARGE SCREENS (1920px+) ── */
+@media (min-width: 1920px) {
+  .skeleton {
+    margin: 0 120px 64px;
+    margin-left: 120px;
+  }
+
+  .mainImage {
+    height: 700px;
+  }
+
+  .wideAd {
+    height: 360px;
+  }
+
+  .ad463 {
+    height: 620px;
+  }
+}
+
+/* ── TABLET (768px) ── */
+@media (max-width: 768px) {
+  .skeleton {
+    margin: 0 16px 32px;
+    margin-left: 16px;
+    padding: 16px 0;
+  }
+
+  .headline {
+    width: 100%;
+    height: 28px;
+  }
+
+  .headlineShort {
+    width: 80%;
+    height: 28px;
+  }
+
+  .mainRow {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .leftContent {
+    width: 100%;
+  }
+
+  .mainImage {
+    height: 260px;
+  }
+
+  .wideAd {
+    height: 160px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .ad463 {
+    height: 280px;
+  }
+
+  .ad600 {
+    height: 200px;
+  }
+
+  .categoryBtn {
+    width: 110px;
+    height: 36px;
+  }
+
+  .shareBtn {
+    width: 90px;
+    height: 36px;
+  }
+}
+
+/* ── MOBILE (375px) ── */
+@media (max-width: 375px) {
+  .skeleton {
+    margin: 0 12px 24px;
+    margin-left: 12px;
+  }
+
+  .mainImage {
+    height: 200px;
+  }
+
+  .wideAd {
+    height: 120px;
+  }
+
+  .ad463 {
+    height: 220px;
+  }
+
+  .ad600 {
+    height: 160px;
+  }
+
+  .headline {
+    height: 24px;
+  }
+
+  .headlineShort {
+    height: 24px;
+  }
+
+  .meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .metaItem {
+    width: 120px;
+    height: 16px;
+  }
+}
+
+/* ── SMALL MOBILE (320px) ── */
+@media (max-width: 320px) {
+  .skeleton {
+    margin: 0 8px 20px;
+    margin-left: 8px;
+  }
+
+  .mainImage {
+    height: 170px;
+  }
+
+  .categoryBtn {
+    width: 90px;
+    height: 32px;
+  }
+
+  .shareBtn {
+    width: 70px;
+    height: 32px;
+  }
+}

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import styles from './OtherStoriesInPolitics.module.css'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import { getCategoryStories } from '../../api/api'
+import OtherStoriesInPoliticsSkeleton from './OtherStoriesInPoliticsSkeleton'
+
 
 export default function OtherStoriesInPolitics() {
   const [stories, setStories] = useState([])
@@ -38,7 +40,7 @@ export default function OtherStoriesInPolitics() {
   const from = (currentPage - 1) * perPage + 1
   const to = Math.min(currentPage * perPage, total)
 
-  if (loading) return <div className={styles.loading}>Loading...</div>
+  if (loading) return <OtherStoriesInPoliticsSkeleton />
   if (error) return <div className={styles.error}>Failed to load stories.</div>
   if (stories.length === 0) return null
 
