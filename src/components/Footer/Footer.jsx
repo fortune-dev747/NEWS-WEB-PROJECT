@@ -23,7 +23,7 @@ export default function Footer() {
 
         {/* Top Row */}
         <div className={styles.topRow}>
-          <img src="/images/footer/AGC-footer.png" alt="AGC News" className={styles.logo} />
+          <img src="/images/footer/NEXUS-footer.png" alt="NEXUS News" className={styles.logo} />
           <div className={styles.socials}>
             <a href="#"><img src="/images/footer/IG.png" alt="IG" /></a>
             <a href="#"><img src="/images/footer/FB.png" alt="FB" /></a>
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className={styles.copyright}>© 2026 AGC Newsnet. All Rights Reserved.</p>
+        <p className={styles.copyright}>© 2026 Nexus Newsnet. All Rights Reserved.</p>
 
       </div>
     </footer>

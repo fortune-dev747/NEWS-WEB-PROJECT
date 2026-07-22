@@ -47,7 +47,7 @@ export default function Navbar({ adImages = ['/images/navbar/ad-navbar.png'] }) 
         <div className={styles.mainNav}>
           <div className={styles.mainNavLeft}>
             <a href="#" className={styles.logo}>
-              <img src="/images/navbar/AGC-navbar.png" alt="AGC News" width={93} height={59} />
+              <img src="/images/navbar/NEXUS-navbar.png" alt="NEXUS News" width={143} height={59} />
             </a>
             <nav className={styles.mainLinks}>
               <NavLink to="/" end className={({ isActive }) => `${styles.mainLink} ${isActive ? styles.active : ''}`}>Home</NavLink>
@@ -83,7 +83,7 @@ export default function Navbar({ adImages = ['/images/navbar/ad-navbar.png'] }) 
           <button className={styles.mobileSearch}><FaMagnifyingGlass /></button>
         </div>
         <a href="#" className={styles.mobileLogo}>
-          <img src="/images/navbar/AGC-navbar.png" alt="AGC News" width={70} height={44} />
+          <img src="/images/navbar/NEXUS-navbar.png" alt="NEXUS News" width={100} height={44} />
         </a>
         <div className={styles.mobileRight}>
           <FaCircleUser className={styles.profileIcon} />
