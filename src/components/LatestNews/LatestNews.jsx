@@ -95,13 +95,7 @@ export default function LatestNews({ heading = 'LATEST NEWS' }) {
           <button className={styles.arrow} onClick={() => scrollToCard(Math.max(0, mobileIndex - 1))}>
             <FaChevronLeft />
           </button>
-          {stories.map((_, i) => (
-            <span
-              key={i}
-              className={`${styles.dot} ${i === mobileIndex ? styles.activeDot : ''}`}
-              onClick={() => scrollToCard(i)}
-            ></span>
-          ))}
+          <span className={styles.mobileCounter}>{mobileIndex + 1} / {stories.length}</span>
           <button className={styles.arrow} onClick={() => scrollToCard(Math.min(stories.length - 1, mobileIndex + 1))}>
             <FaChevronRight />
           </button>

@@ -144,6 +144,14 @@
   object-fit: cover;
 }
 
+.mobileCounter {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+  min-width: 40px;
+  text-align: center;
+}
+
 .loading {
   padding: 24px 49px;
   font-family: var(--font-body);
@@ -227,11 +235,38 @@
     margin-right: 80px;
   }
 
-  .card {
-    width: 580px;
-    height: 700px;
-    margin-left: 40px;
-  }
+  .arrow {
+  font-size: 33px;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #999999;
+  display: inline-block;
+}
+
+.activeDot {
+  background-color: #F52A32;
+}
+
+.cards {
+  display: flex;
+  gap: 0;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  flex: 1;
+  height: 397px;
+  overflow: hidden;
+  border-right: 1px solid #999999;
+  margin-left: 25px;
+  border-radius: 13px;
+  min-width: 0;
+}
 
   .pill {
     bottom: 640px;

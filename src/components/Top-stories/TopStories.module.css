@@ -150,6 +150,12 @@
 }
 
 /* ===== RESPONSIVE ===== */
+/* ────  (1440px) ─── */
+@media (width: 1440px) {
+.topStories {
+  padding: 48px 30px;
+}
+}
 /* ── LARGE SCREENS (1920px+) ── */
 @media (min-width: 1920px) {
   .topStories {

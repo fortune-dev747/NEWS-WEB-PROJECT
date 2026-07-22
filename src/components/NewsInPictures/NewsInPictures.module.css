@@ -123,6 +123,12 @@
   display: none;
 }
 
+@media (width: 1440px) {
+  .newsInPictures {
+  margin: 0 16px 48px;
+}
+}
+
 /* ── LARGE SCREENS (1920px+) ── */
 @media (min-width: 1920px) {
   .newsInPictures {

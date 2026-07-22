@@ -211,6 +211,12 @@
   object-fit: cover;
 }
 
+@media (width: 1440px) {
+  .rightColumn {
+  right: -20px;
+}
+  
+}
 /* ── LARGE SCREENS (1920px+) ── */
 @media (min-width: 1920px) {
   .featuredStories {
@@ -302,7 +308,7 @@
   }
 
   .heading {
-    font-size: 28px;
+    font-size: 38px;
   }
 
   .headline {
@@ -322,6 +328,14 @@
 
   .rightColumn {
     width: 620px;
+  }
+
+  .adLabel {
+    font-size: 22px;
+  }
+
+  .arrow {
+    font-size: 30px;
   }
 
   .adTop {
@@ -430,4 +444,13 @@
   .adBottom {
     height: 120px;
   }
+}
+
+/* ── MOBILE (375px) ── */
+@media (max-width: 320px) {
+  .featuredStories {
+    display: none;
+  }
+
+
 }

@@ -35,7 +35,7 @@ export default function Footer() {
 
         {/* Search Bar */}
         <div className={styles.searchBar}>
-          <input type="text" placeholder="Search AGC Newsnet" className={styles.searchInput} />
+          <input type="text" placeholder="Search Nexus News" className={styles.searchInput} />
           <FaMagnifyingGlass className={styles.searchIcon} />
         </div>
 
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className={styles.copyright}>© 2026 Nexus Newsnet. All Rights Reserved.</p>
+        <p className={styles.copyright}>© 2026 Nexus News. All Rights Reserved.</p>
 
       </div>
     </footer>

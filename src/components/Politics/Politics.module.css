@@ -133,6 +133,7 @@
   width: 501px;
   padding-top: 48px;
   padding-left: 32px;
+  overflow: hidden;
 }
 
 .storyItem {
@@ -185,6 +186,13 @@
 @media (width: 1280px) {
   .border {
     right: 480px;
+    height: 600px;
+  }
+}
+
+@media (width: 1440px) {
+  .border {
+    right: 500px;
     height: 600px;
   }
 }
@@ -257,6 +265,9 @@
     margin: 0 100px 80px;
     padding: 48px;
     gap: 60px;
+      border-top: 3px solid #DDDDDD;
+  border-bottom: 3px solid #DDDDDD;
+
   }
 
   .leftSide {
@@ -308,7 +319,8 @@
 
   .border {
     right: 860px;
-    height: 1000px;
+    height: 1100px;
+  border-right: 3px solid #DDDDDD;
   }
 }
 

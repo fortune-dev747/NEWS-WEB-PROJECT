@@ -13,7 +13,7 @@ export default function Sport() {
   useEffect(() => {
     getCategoryStories(3)
       .then(res => {
-        const stories = res.data.data
+        const stories = res.data.data.slice(0, 6) // Get the first 6 stories
         setMainStory(stories[0])
         setSideStories(stories.slice(1))
         setLoading(false)

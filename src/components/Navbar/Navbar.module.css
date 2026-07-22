@@ -263,11 +263,17 @@
   }
 
   .topLinks a {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .date {
-    font-size: 20px;
+    font-size: 25px;
+  }
+
+  .socials a {
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
   }
 
   .mainNav {
@@ -284,7 +290,7 @@
   }
 
   .mainLinks a {
-    font-size: 23px;
+    font-size: 27px;
   }
 
   .mainNavRight {
@@ -293,11 +299,11 @@
   }
 
   .mainNavRight a {
-    font-size: 18px;
+    font-size: 28px;
   }
 
   .logo img {
-    width: 150px;
+    width: 250px;
     height: 95px;
   }
 

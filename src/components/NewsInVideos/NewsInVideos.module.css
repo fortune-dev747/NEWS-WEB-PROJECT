@@ -141,6 +141,12 @@
   display: none;
 }
 
+@media (width: 1440px) {
+  .grid {
+  margin-left: 10px;
+}
+}
+
 /* ── LARGE SCREENS (1920px+) ── */
 @media (min-width: 1920px) {
   .newsInVideos {
@@ -200,6 +206,7 @@
     margin: 0 10px 80px;
     padding: 48px 0;
     margin-right: 100px;
+    margin-top: 200px;
   }
 
   .heading {

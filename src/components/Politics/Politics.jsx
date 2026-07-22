@@ -4,6 +4,7 @@ import { FaChevronRight } from 'react-icons/fa6'
 import { getCategoryStories } from '../../api/api'
 import PoliticsSkeleton from './PoliticsSkeleton'
 
+
 export default function Politics() {
   const [mainStory, setMainStory] = useState(null)
   const [sideStories, setSideStories] = useState([])
@@ -13,7 +14,7 @@ export default function Politics() {
   useEffect(() => {
     getCategoryStories(1)
       .then(res => {
-        const stories = res.data.data
+        const stories = res.data.data.slice(0, 6) // Get the first 6 stories
         setMainStory(stories[0])
         setSideStories(stories.slice(1))
         setLoading(false)
@@ -48,8 +49,9 @@ export default function Politics() {
 
         {/* Main Image */}
         <div className={styles.mainImage}>
-          <img src={mainStory.banner_image} alt={mainStory.title} />
+        <img src={mainStory.banner_image} alt={mainStory.title} />
         </div>
+      
 
         {/* Headline & Description */}
         <div className={styles.textContent}>

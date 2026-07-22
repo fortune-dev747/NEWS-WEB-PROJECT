@@ -190,6 +190,14 @@
   }
 }
 
+@media (width: 1440px) {
+  .border {
+    right: 500px;
+    height: 650px;
+    top: 40px;
+  }
+}
+
 /* ── LARGE SCREENS (1920px+) ── */
 @media (min-width: 1920px) {
   .sport {
@@ -361,7 +369,9 @@
   }
 
   .border {
-    right: 400px;
+    top: 20px;
+    right: 435px;
+    height: 550px;
   }
 }
 
