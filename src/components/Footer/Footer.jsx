@@ -4,12 +4,12 @@ import { FaMagnifyingGlass } from 'react-icons/fa6'
 export default function Footer() {
   const linkRows = [
     ['Home', 'Business', 'Tech', 'Photos', 'About Us'],
-    ['Africa', 'Sport', 'Opinion', 'AGC Archive', 'Contact Us'],
+    ['Africa', 'Sport', 'Opinion', 'NEXUS Archive', 'Contact Us'],
     ['Politics', 'Health', 'Videos', 'Privacy Policy', 'Advert Rate'],
   ]
 
   const mobileLinkRows = [
-    ['Home', 'Sport', 'AGC Archive'],
+    ['Home', 'Sport', 'NEXUS Archive'],
     ['Africa', 'Business', 'Photos'],
     ['Politics', 'Health', 'Privacy Policy'],
     ['Tech', 'About Us', ''],

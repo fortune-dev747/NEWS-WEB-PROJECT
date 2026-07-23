@@ -22,6 +22,3 @@ export const getMissedStories = () => fetchData('/api/general/stories/missed-sto
 export const getCategories = () => fetchData('/api/general/categories')
 export const getCategoryStories = (categoryId, page = 1) => fetchData(`/api/general/categories/${categoryId}/stories?page=${page}`)
 export const getStory = (story) => fetchData(`/api/general/stories/${story}`)
-export const getAdvertisements = () => fetchData('/api/general/advertisements')
-export const getSocials = () => fetchData('/api/general/socials')
-export const searchStories = (query) => fetchData(`/api/general/stories/search?q=${query}`)

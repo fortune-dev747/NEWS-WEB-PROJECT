@@ -18,10 +18,10 @@ export default function Navbar({ adImages = ['/images/navbar/ad-navbar.png'] }) 
         <nav className={styles.topLinks}>
           <a href="#">About Us</a>
           <a href="#">Contact Us</a>
-          <a href="#">AGC Archive</a>
+          <a href="#">NEXUS Archive</a>
           <a href="#">Advert Rate</a>
           <a href="#">Privacy Policy</a>
-          <a href="#">AGC VIP</a>
+          <a href="#">NEXUS VIP</a>
         </nav>
         <div className={styles.topRight}>
           <span className={styles.date}>{today} |</span>

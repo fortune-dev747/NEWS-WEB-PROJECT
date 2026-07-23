@@ -4,31 +4,26 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import { getCategoryStories } from '../../api/api'
 import OtherStoriesInPoliticsSkeleton from './OtherStoriesInPoliticsSkeleton'
 
+const STORIES_PER_PAGE = 5
 
 export default function OtherStoriesInPolitics() {
-  const [stories, setStories] = useState([])
+  const [allStories, setAllStories] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [currentPage, setCurrentPage] = useState(1)
-  const [totalPages, setTotalPages] = useState(1)
-  const [total, setTotal] = useState(0)
-  const [perPage, setPerPage] = useState(20)
 
   useEffect(() => {
     setLoading(true)
-    getCategoryStories(1, currentPage)
+    getCategoryStories(1)
       .then(res => {
-        setStories(res.data.data)
-        setTotalPages(res.data.meta.last_page)
-        setTotal(res.data.meta.total)
-        setPerPage(res.data.meta.per_page)
+        setAllStories(res.data.data)
         setLoading(false)
       })
       .catch(err => {
         setError(err.message)
         setLoading(false)
       })
-  }, [currentPage])
+  }, [])
 
   const formatDate = (dateStr) => {
     return new Date(dateStr).toLocaleDateString('en-US', {
@@ -37,16 +32,34 @@ export default function OtherStoriesInPolitics() {
     })
   }
 
-  const from = (currentPage - 1) * perPage + 1
-  const to = Math.min(currentPage * perPage, total)
+  const totalPages = Math.ceil(allStories.length / STORIES_PER_PAGE)
+  const from = (currentPage - 1) * STORIES_PER_PAGE + 1
+  const to = Math.min(currentPage * STORIES_PER_PAGE, allStories.length)
+  const stories = allStories.slice((currentPage - 1) * STORIES_PER_PAGE, currentPage * STORIES_PER_PAGE)
 
   if (loading) return <OtherStoriesInPoliticsSkeleton />
   if (error) return <div className={styles.error}>Failed to load stories.</div>
-  if (stories.length === 0) return null
+  if (allStories.length === 0) return null
 
   const mainStory = stories[0]
   const stackedRow1 = stories.slice(1, 3)
   const stackedRow2 = stories.slice(3, 5)
+
+  const getPageNumbers = () => {
+    const pages = []
+    if (totalPages <= 7) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i)
+    } else {
+      pages.push(1)
+      if (currentPage > 3) pages.push('...')
+      for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+        pages.push(i)
+      }
+      if (currentPage < totalPages - 2) pages.push('...')
+      pages.push(totalPages)
+    }
+    return pages
+  }
 
   return (
     <section className={styles.otherStories}>
@@ -94,7 +107,7 @@ export default function OtherStoriesInPolitics() {
 
       {/* Pagination */}
       <div className={styles.pagination}>
-        <p className={styles.showingText}>Showing {from} - {to} of {total}</p>
+        <p className={styles.showingText}>Showing {from} - {to} of {allStories.length}</p>
         <div className={styles.pageControls}>
           <button
             className={styles.pageArrow}
@@ -103,14 +116,16 @@ export default function OtherStoriesInPolitics() {
           >
             <FaChevronLeft />
           </button>
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-            <button
-              key={page}
-              className={`${styles.pageNumber} ${page === currentPage ? styles.activePage : ''}`}
-              onClick={() => setCurrentPage(page)}
-            >
-              {page}
-            </button>
+          {getPageNumbers().map((page, index) => (
+            page === '...'
+              ? <span key={`ellipsis-${index}`} className={styles.ellipsis}>...</span>
+              : <button
+                  key={page}
+                  className={`${styles.pageNumber} ${page === currentPage ? styles.activePage : ''}`}
+                  onClick={() => setCurrentPage(page)}
+                >
+                  {page}
+                </button>
           ))}
           <button
             className={styles.pageArrow}

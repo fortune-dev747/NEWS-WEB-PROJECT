@@ -327,6 +327,16 @@
   line-height: 30px;
 }
 
+/* RESPONSIVE */
+
+@media (width: 1440px) {
+  .articleHero {
+    margin: 0 50px 48px;
+    padding: 24px 0;
+    margin-left: 40px;
+  }
+}
+
 /* ── LARGE SCREENS (1920px+) ── */
 @media (min-width: 1920px) {
   .articleHero {
@@ -353,7 +363,8 @@
     margin-bottom: 24px;
   }
 
-  .posted, .readTime {
+  .posted,
+  .readTime {
     font-size: 22px;
     line-height: 64px;
   }
@@ -465,7 +476,8 @@
     margin-bottom: 32px;
   }
 
-  .posted, .readTime {
+  .posted,
+  .readTime {
     font-size: 28px;
     line-height: 80px;
   }

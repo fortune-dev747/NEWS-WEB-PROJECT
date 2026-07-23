@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import styles from './MissedStories.module.css'
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
+// import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import { getMissedStories } from '../../api/api'
 
 export default function MissedStories() {
@@ -38,14 +38,14 @@ export default function MissedStories() {
       {/* Header Row */}
       <div className={styles.headerRow}>
         <h2 className={styles.heading}>STORIES YOU MAY HAVE MISSED</h2>
-        <div className={styles.controls}>
+        {/* <div className={styles.controls}>
           <button className={styles.arrow}><FaChevronLeft /></button>
           <span className={styles.dot + ' ' + styles.activeDot}></span>
           <span className={styles.dot}></span>
           <span className={styles.dot}></span>
           <span className={styles.dot}></span>
           <button className={styles.arrow}><FaChevronRight /></button>
-        </div>
+        </div> */}
       </div>
 
       {/* Cards */}

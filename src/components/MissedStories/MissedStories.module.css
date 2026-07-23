@@ -22,7 +22,7 @@
   margin-left: 14px;
 }
 
-.controls {
+/* .controls {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -41,8 +41,8 @@
 
 .arrow:hover {
   color: var(--accent);
-}
-
+} */
+/* 
 .dot {
   width: 8px;
   height: 8px;
@@ -53,7 +53,7 @@
 
 .activeDot {
   background-color: var(--accent);
-}
+} */
 
 /* Cards */
 .cards {
@@ -330,7 +330,7 @@
   }
 
   .controls {
-    margin-right: 200px;
+    display: none;
   }
 
   .cards {

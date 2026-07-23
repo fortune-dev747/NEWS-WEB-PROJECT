@@ -1,145 +1,145 @@
 .otherStories {
-    margin: 0 43px 48px;
-    padding: 24px 0;
-    margin-left: 80px;
+  margin: 0 43px 48px;
+  padding: 24px 0;
+  margin-left: 80px;
 }
 
 .heading {
-    font-family: var(--font-body);
-    font-size: 18px;
-    font-weight: 700;
-    color: #282828;
-    letter-spacing: 0%;
-    line-height: 100%;
-    border-left: 5px solid #813D97;
-    padding: 4px 12px;
-    border-radius: 2px;
-    margin-bottom: 24px;
-     margin-left: 14px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 700;
+  color: #282828;
+  letter-spacing: 0%;
+  line-height: 100%;
+  border-left: 5px solid #813D97;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 24px;
+  margin-left: 14px;
 }
 
 .rows {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .row {
-    display: flex;
-    gap: 4px;
-    align-items: flex-start;
+  display: flex;
+  gap: 4px;
+  align-items: flex-start;
 }
 
 .stackedStories {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 /* Story Card */
 .storyCard {
-    display: flex;
-    gap: 24px;
-    width: 1049px;
-    height: 305px;
-    padding: 0;
-    flex-shrink: 0;
+  display: flex;
+  gap: 24px;
+  width: 1049px;
+  height: 305px;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .imageWrapper {
-    position: relative;
-    width: 453px;
-    height: 305px;
-    flex-shrink: 0;
-    overflow: hidden;
+  position: relative;
+  width: 453px;
+  height: 305px;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .imageWrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .pill {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    font-family: var(--font-body);
-    font-size: 12px;
-    font-weight: 500;
-    color: #FFFFFF;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 22px;
-    padding: 4px 14px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 22px;
+  padding: 4px 14px;
 }
 
 .storyContent {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 24px 24px 24px 0;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 24px 24px 0;
+  justify-content: center;
 }
 
 .headline {
-    font-family: var(--font-body);
-    font-size: 24px;
-    font-weight: 600;
-    color: #282828;
-    letter-spacing: 0%;
-    line-height: 30px;
-    width: 560px;
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: #282828;
+  letter-spacing: 0%;
+  line-height: 30px;
+  width: 560px;
 }
 
 .posted {
-    font-family: var(--font-body);
-    font-size: 16px;
-    font-weight: 400;
-    color: #5A5A5A;
-    letter-spacing: 0%;
-    line-height: 53px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: #5A5A5A;
+  letter-spacing: 0%;
+  line-height: 53px;
 }
 
 .description {
-   font-family: var(--font-body);
-    font-size: 20px;
-    font-weight: 300;
-    color: #282828;
-    letter-spacing: 0%;
-    line-height: 30px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 300;
+  color: #282828;
+  letter-spacing: 0%;
+  line-height: 30px;
 }
 
 .continueBtn {
-    width: 144px;
-    height: 40px;
-    border-radius: 22px;
-    border: 1px solid #999999;
-    background: transparent;
-   font-family: var(--font-body);
-    font-size: 13px;
-    font-weight: 500;
-    color: #5A5A5A;
-    letter-spacing: 2%;
-    line-height: 35px;
-    cursor: pointer;
-    margin-top: 8px;
+  width: 144px;
+  height: 40px;
+  border-radius: 22px;
+  border: 1px solid #999999;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: #5A5A5A;
+  letter-spacing: 2%;
+  line-height: 35px;
+  cursor: pointer;
+  margin-top: 8px;
 }
 
 .continueBtn:hover {
-    background: var(--text-primary);
-    color: #FFFFFF;
-    border-color: var(--text-primary);
+  background: var(--text-primary);
+  color: #FFFFFF;
+  border-color: var(--text-primary);
 }
 
 .pagination {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top:72px;
-   margin-bottom:72px;
-    margin-left:32px;
+  margin-top: 72px;
+  margin-bottom: 72px;
+  margin-left: 32px;
   width: 521px;
 }
 
@@ -202,33 +202,33 @@
 
 /* Ads */
 .ad250 {
-    width: 300px;
-    height: 250px;
-    flex-shrink: 0;
-    overflow: hidden;
+  width: 300px;
+  height: 250px;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .ad600 {
-    width: 300px;
-    height: 600px;
-    flex-shrink: 0;
-    overflow: hidden;
+  width: 300px;
+  height: 600px;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .ad466 {
-    width: 233px;
-    height: 466px;
-    flex-shrink: 0;
-    overflow: hidden;
-    margin-left: 64px;
+  width: 233px;
+  height: 466px;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin-left: 64px;
 }
 
 .ad250 img,
 .ad600 img,
 .ad466 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .loading {
@@ -245,6 +245,14 @@
   color: var(--accent);
 }
 
+/* RESPONSIVE */
+@media (width: 1440px) {
+  .otherStories {
+    margin: 0 43px 48px;
+    padding: 24px 0;
+    margin-left: 50px;
+  }
+}
 
 /* ── LARGE SCREENS (1920px+) ── */
 @media (min-width: 1920px) {
@@ -391,12 +399,12 @@
   }
 
   .posted {
-    font-size: 22px;
+    font-size: 32px;
     line-height: 70px;
   }
 
   .description {
-    font-size: 30px;
+    font-size: 40px;
     line-height: 44px;
   }
 
@@ -430,17 +438,21 @@
   }
 
   .showingText {
-    font-size: 22px;
+    font-size: 32px;
   }
 
   .pageNumber {
-    width: 44px;
-    height: 44px;
-    font-size: 20px;
+    width: 54px;
+    height: 54px;
+    font-size: 30px;
   }
 
   .ellipsis {
-    font-size: 20px;
+    font-size: 30px;
+  }
+
+  .pageArrow {
+    font-size: 40px;
   }
 }
 
@@ -483,8 +495,7 @@
   }
 
   .ad250 {
-    width: 250px;
-    height: 200px;
+    display: none;
   }
 
   .ad600 {
@@ -583,7 +594,7 @@
   .ad250 img,
   .ad600 img,
   .ad466 img {
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .pagination {
